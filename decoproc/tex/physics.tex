@@ -1,0 +1,160 @@
+%!TEX root = decoproc_fr.tex
+
+\section{Physique}
+
+\begin{frame}{Pression}  
+	Pression:
+	\begin{itemize}
+		\item Rapport entre de la force s'exerçant sur une surface et son aire.
+	\end{itemize}
+	\[ \boxed{ Pression = \dfrac{Force}{Surface} } \]
+	\vfill
+	L'unité de pression du système international d'unité est le Pascal (Pa)\\
+\end{frame}
+
+\begin{frame}{Pression atmosphérique}  
+	La pression atmosphèrique correspond au poids de la colonne d'air, et change avec l'altitude\\
+	\centering
+	\begin{tabular}{| c | c |}
+		\hline
+		Altitude [m] & Pression [hPa] \\
+		\hline
+		0		& 1013.25 \\
+		1000 	& 898.76 \\
+		2000 	& 794.98 \\
+		3000 	& 701.12 \\
+		5000 	& 540.25 \\
+		8000 	& 356.06 \\
+		10000 & 264.42 \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Conversion d'unité}  
+	Pression atmosphérique moyenne au niveau de la mer:
+	\[ 1 ATA = 1013.25 hPa = 1.01325 bar \]
+	Pour des raisons pratiques:
+	\[ 1 ATA \approx 1 bar\]
+	Système Impérial:
+	\[ 1 ATA = 14.5 PSI\]
+	\[ 1 bar = 14.7 PSI\]
+\end{frame}
+
+\begin{frame}{Pression de l'eau}
+	Pression hydrostatique:
+	\[ P = \rho \cdot g \cdot h\]
+	Eau douce: ($\rho = 1000kg / m^3$)
+	\begin{align*}
+		0.981 bar &= 0.968 ATA = 10 mfw\\
+		1 bar &= 0.987 ATA = 10.19 mfw
+	\end{align*}
+	Eau de mer: ($\rho = 1030kg / m^3$)
+	\begin{align*}
+		1.010 bar &= 0.997 ATA = 10 msw\\
+		1 bar &= 0.987 ATA = 9.89 msw
+	\end{align*}
+	Pratique:
+	\[ 1bar \approx 1 ATA \approx 10msw\]
+\end{frame}
+
+\begin{frame}{Pression de l'eau}  
+	Pression:
+	\[  Pression = Profondeur/10 + 1 \]
+	Profondeur:
+	\[  Profondeur = (Pression-1) \cdot 10 \]
+	\vfill
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Profondeur [msw] 	&	Pression [ATA]	& Pression [bar]	& Pression [psi] \\
+		\hline
+		0	& 1	& 1 	& 14.7 \\
+		10	& 2	& 2	& 29.4 \\
+		20	& 3	& 3	& 44.1 \\
+		30	& 4	& 4	& 58.8 \\
+		40	& 5	& 5	& 73.5 \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Boyle-Mariotte}
+	Pression est inversement proportionnelle au volume
+	\[ \boxed{P \propto \frac{1}{V} \qquad (T=constant)} \]
+	\vfill
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Profondeur [msw] 	&	Pression [bar]	& Volume & Densité \\
+		\hline
+		0	& 1	& 1/1	& 1x \\
+		10	& 2	& 1/2	& 2x \\
+		20	& 3	& 1/3	& 3x \\
+		30	& 4	& 1/4	& 4x \\
+		40	& 5	& 1/5	& 5x \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Loi de Dalton}
+	La pression d'un gas est égal à la somme des pressions partielles\\
+	\[\boxed{P = PP1 + PP2 + PP3 +...+P}\]
+	\vfill
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Profondeur [msw] 	&	Pression [bar]	& $PN_2$ [bar] & $PO_2$ [bar] \\
+		\hline
+		0		& 1	& 0.79	& 0.21 \\
+		10		& 2	& 1.58	& 0.42 \\
+		20		& 3	& 2.37	& 0.63 \\
+		30		& 4	& 3.16	& 0.84 \\
+		40		& 5	& 4.35	& 1.05 \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Loi de Dalton}  
+	Relation entre pression partielle, pression ambiante et fraction gazeuse.\\
+	\[ \boxed{ \dfrac{PP}{Pa \bigg| Fg} } \]
+	
+	PP = Pression Partielle [bar]\\
+	Pa = Pression Ambiant [bar]\\
+	Fg = Fraction gazeuse [-]	
+\end{frame}
+
+\begin{frame}{Loi de Dalton}
+	Pression partielle:
+	\begin{itemize}
+		\item Permet de déterminer la pression partielle d'un gaz en profondeur
+		\item Exposition à l'oxygène (toxicité)
+		\item Exposition à l'azote (décompression)
+	\end{itemize}
+	\[ \boxed {PP = Pa \times Fg} \]
+	\vfill
+	\underline{Exemple:}	Pression partielle d'oxygène pour de l'air à 40m\\
+	\[ PO_2 = 5 \times 0.21 = 1.05 bar\]
+\end{frame}
+
+\begin{frame}{Loi de Dalton}
+	Profondeur maximum d'utilisation (MOD):
+	\begin{itemize}
+		\item Permet de déterminer la profondeur maximale à laquelle un mélange gazeux peut être utilisé
+	\end{itemize}
+	\[ \boxed{Pa = PP / Fg} \]
+	\vfill
+	\underline{Exemple:}	Profondeur maximale d'utilisation d'un Nitrox 36\\
+	\[ Pa = 1.6 / 0.36 = 4.4 bar \]
+	\[ P = (4.4 - 1) \times 10 = 34m \]	
+\end{frame}
+
+\begin{frame}{Loi de Dalton}
+	Mélange idéal:
+	\begin{itemize}
+		\item Permet de déterminer le mélange idéal pour une profondeur donnée
+	\end{itemize}
+	 \[ \boxed{Fg = PP / Pa} \]
+	\vfill
+	\underline{Exemple:}	Mélange idéal pour une plongée à 28m\\
+	\[	Pa = (28 / 10)+1 = 3.8 bar\]
+	\[ FO_2 = 1.4 / 3.8 = 0.36 = EAN36 \]
+\end{frame}
