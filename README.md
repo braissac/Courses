@@ -1,9 +1,24 @@
 Diving courses
 
-decoproc:
----------
+
+advnitrox:			
+TDI Advanced Nitrox
+
+compressor:			
+TDI Compressor Operator
+
+decoproc:			
 TDI Decompression Procedures
 
-advnitrox:
-----------
-TDI Advanced Nitrox
+equipment:			
+SDI Equipment Specialist
+
+shared:				
+common files
+
+visualinspection:	
+SDI Visual Inspection Procedures
+
+vpm:					
+Variable Permeability Model
+
