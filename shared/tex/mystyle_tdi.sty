@@ -1,0 +1,126 @@
+\ProvidesPackage{../../shared/tex/mystyle_tdi}
+
+%---------------------------------------------------------------------
+%										PACKAGES
+%---------------------------------------------------------------------
+
+\usepackage{helvet}	% Helvetica font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath,amssymb,xfrac} % Math
+\usepackage{mathtools} % Math
+\usepackage{multicol}
+\usepackage{transparent,framed,color}
+\usepackage{multimedia}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{tabularx} % Tabular
+\usepackage{graphicx,tikz} % Pictures and path
+\usetikzlibrary{mindmap}
+\usepackage{tcolorbox}
+
+%---------------------------------------------------------------------
+%										COMMANDS
+%---------------------------------------------------------------------
+
+% Image
+\newcommand{\mypict}[1]{%
+	\centering\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{#1}
+}
+
+%---------------------------------------------------------------------
+%										EQUATION
+%---------------------------------------------------------------------
+
+% Margin around equation
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{0pt}
+  \setlength\belowdisplayskip{10pt}
+}
+
+%---------------------------------------------------------------------
+%										BEAMER THEME
+%---------------------------------------------------------------------
+
+% Theme
+\usetheme{default}
+
+% Sidebar
+\useoutertheme[height=36pt, width=2cm, hideothersubsections]{sidebar}
+
+% Change the color theme
+\definecolor{mblack}{RGB}{0,0,0}
+\definecolor{mgray}{RGB}{100, 100, 100}  
+\definecolor{mwhite}{RGB}{255, 255, 255}
+\definecolor{mred}{RGB}{255, 0, 0}
+\definecolor{mblue}{RGB}{0, 113, 187}
+
+\setbeamercolor{palette sidebar}{parent=palette}
+
+% Text
+\setbeamercolor{normal text}{fg=mblack}
+\setbeamercolor{structure}{fg=mblack}
+\setbeamerfont{structure}{textcolor=mblack}
+
+% Sidebar
+\setbeamercolor{sidebar}{bg=mblue}
+\setbeamercolor{section in sidebar}{fg=mred}
+\setbeamercolor{section in sidebar shaded}{fg=mwhite}
+\setbeamercolor{subsection in sidebar}{fg=mred}
+\setbeamercolor{subsection in sidebar shaded}{fg=mwhite}
+
+% Item
+\setbeamercolor{item}{fg=mblack}
+\setbeamercolor{subitem}{parent=item}
+\setbeamercolor{subsubitem}{parent=subitem}
+
+% Enumerate
+\setbeamercolor{itemize item}{parent=item}
+\setbeamercolor{itemize subitem}{parent=subitem}
+\setbeamercolor{itemize subsubitem}{parent=subsubitem}
+
+% Description
+\setbeamercolor{description item}{parent=item}
+
+% Frametitle
+\addtobeamertemplate{frametitle}{\vskip2pt}{}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamercolor{frametitle}{fg=mwhite,bg=mblue}
+
+% Circle for items
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{enumerate items}[default]
+	
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Logo
+\logo{\includegraphics[width=1.4cm]{../../shared/img/TDI_Logo}}
+%\setbeamercolor{logo}{fbg=mblue}
+
+%---------------------------------------------------------------------
+%										BEAMER LAYOUT
+%---------------------------------------------------------------------
+
+% Section Title
+% \strut command inserts invisible elements that ensure a guaranteed height:
+\AtBeginSection[]
+{  \begin{frame}
+		\resizebox{!}{18pt}{\strut\textbf{\insertsection}\strut}\\
+		\vfill
+   \end{frame}
+}
+
+% Title 
+\setbeamertemplate{title page}
+{ 	
+	\resizebox{!}{12pt}{\strut\insertauthor\strut}\\
+	\resizebox{!}{18pt}{\strut\textbf{\inserttitle}\strut}\\
+	\resizebox{!}{12pt}{\strut\insertinstitute\strut}\\
+	\vfill
+}	
+
+\makeatother

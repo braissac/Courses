@@ -1,0 +1,360 @@
+%!TEX program = <pdflatex> 
+
+\documentclass[aspectratio=1610,english,12pt]{beamer}
+
+\usepackage{../../shared/tex/mystyle}
+
+% Image
+\newcommand{\vipict}[1]{%
+	\hfill
+	\begin{center}
+		\includegraphics[width=0.9\linewidth,height=0.7\textheight,keepaspectratio]{#1}
+	\end{center}
+	\hfill 
+}
+
+% Description
+\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+\setbeamertemplate{description item}[align left]
+
+\author[]{Chris Braissant}
+\title[]{TDI Visual Inspection Procedures}
+\institute{Ban's Technical Diving }
+\date{\today}	
+	
+%---------------------------------------------------------------------
+%										DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+%---------------------------------------------------------------------
+%										Introduction
+%---------------------------------------------------------------------
+
+\section{Introduction}
+
+\subsection{Intro, Paperwork, Schedule}
+
+\begin{frame}{Course overview}
+	Promote safety in the care and maintenance of high-pressure scuba cylinders.\\~\\
+	Train in proper handling, filling and inspection techniques.\\~\\
+	Identification of various defective conditions.\\
+\end{frame}
+
+\begin{frame}{Paperwork}
+	Liability Release and Express Assumption of Risk\\~\\
+	Medical Statement
+\end{frame}
+
+%---------------------------------------------------------------------
+%										Safe handling of cylinders
+%---------------------------------------------------------------------
+\section{Safe handling of cylinders}
+
+\subsection{Testing Standards}
+
+\begin{frame}{\insertsubsection}
+	USA:
+	\begin{itemize}
+		\item DOT: Department of Transport
+		\item CGA: Compressed Gas Association
+	\end{itemize}
+
+	Canada:
+	\begin{itemize}
+		\item TC: Transport Canada
+	\end{itemize}
+
+	Europe:
+	\begin{itemize}
+		\item BS: British Standards
+		\item EN: European Nation
+	\end{itemize}
+
+	Thailand:
+	\begin{itemize}
+		\item TIS: Thai Industrial Standards
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{DOT: Department of Transport}
+	Steel cylinders:
+	\begin{itemize}
+		\item CGA C-6\\Standard for Visual Inspection of Steel Compressed Gas Cylinders
+	\end{itemize}
+	Aluminium cylinders:
+	\begin{itemize}
+		\item CGA C-6.1\\Standard for Visual Inspection of High Pressure Aluminum Alloy Compressed Gas Cylinders
+	\end{itemize}
+	Composite cylinders:
+	\begin{itemize}
+		\item CGA C-6.2\\Standard for Visual Inspection and Requalification of Fiber Reinforced High Pressure Cylinders
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Europe}
+	Steel cylinders:
+	\begin{itemize}
+		\item BS EN 1968\\Transportable gas cylinders. Periodic inspection and testing of seamless steel gas cylinders
+	\end{itemize}
+	Aluminium cylinders:	
+	\begin{itemize}
+		\item BS EN 1802\\Transportable gas cylinders. Periodic inspection and testing of seamless aluminium alloy gas cylinders
+	\end{itemize}
+	Composite cylinders:
+	\begin{itemize}
+		\item BS EN ISO 11623\\Transportable gas cylinders. Periodic inspection and testing of composite gas cylinders
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Europe:}
+	Summary of the standards:
+	\begin{itemize}
+		\item Hydrostatic test: 5 years
+		\item Visual inspection: 2 1/2 years
+		\item Stamping: YYYY/MM
+		\item Content label: BS EN ISO 7225 (Air, Nitrox, Trimix -  Compressed Gas - Oxidizing)
+		\item Color coding: EN1089-3 (For "Diver at work") 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Thailand}  
+	All cylinders:
+	\begin{itemize}
+		\item TIS 358-2551\\Use and maintenance of compressed gas cylinders
+	\end{itemize}
+\end{frame}
+
+% ------- Chapter review -------
+\subsection{Chapter review}
+
+\begin{frame}{Chapter 2: review}
+	\begin{enumerate}
+		\item \textit{What is the recommended fill rate for scuba cylinders?}\\
+				300-600 psi/min or 20-40 bar/min\\~\\
+		\item \textit{If you suspect that your customer put his own EOI sticker on his cylinder, what can you do about it?}\\
+				In any doubt, tell the customer and inspect the cylinder\\~\\
+		\item \textit{Can you stamp a 3AL over an SP6498 that the hydro people forgot to do?}\\
+				No, it can only be done by an hydro facility.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Chapter 2: review}
+	\begin{enumerate}
+		\setcounter{enumi}{3}
+		\item \textit{Describe the appearance of an approved burst disc as well as two exemple of an unapproved one.}\\
+				Approved: Vent holes in the side of the assembly.\\
+				Unapproved: single hole in the end or no hole \\~\\ 
+		\item \textit{An EOI sticker applied to a cylinder within the past year is ample evidence to authorize filling?}\\
+				No. The sticker is in itself not legal justification. The operator is responsible for assuring that the cylinder is safe to fill.\\~\\
+		\item \textit{As an inspector, what can you tell by the marking in the photograph below?}
+				Not safe to fill.\\
+				SP6498: Need to be stamped 3AL over\\
+				9  $\Uparrow$ 74: Hydro over due. 
+	\end{enumerate}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										Tools
+%---------------------------------------------------------------------
+\section{Tools}
+
+\subsection{Valve}
+\begin{frame}{Removing the handle}  
+	Tank knob screwdriver\\
+		\vipict{../img/knob_driver}
+\end{frame}
+
+\begin{frame}{Removing the valve}  
+	Valve removing tool (DIN):\\
+	\vipict{../img/din_removal} 
+\end{frame}
+
+\begin{frame}{Removing the valve}
+	Adjustable Wrench:\\
+	\vipict{../img/adj_wrench}
+\end{frame}
+
+\begin{frame}{Valve inspection}
+	Various set of wrench, depending of the manufacturer:\\
+	\vipict{../img/wrench}	
+\end{frame}
+
+\begin{frame}{Valve inspection}  
+	Set of allen key (dip tube):\\
+	\vipict{../img/allen}
+\end{frame}
+
+\begin{frame}{Valve inspection}  
+	Go-NoGo gauge:\\
+	\vipict{../img/valve_nogo}
+\end{frame}
+
+\subsection{Tank Inspection}
+\begin{frame}{Tank Inspection}  
+	Bright light:\\
+	\vipict{../img/light}
+\end{frame}
+
+\begin{frame}{Tank Inspection}  
+	Pit gauge:\\
+	\vipict{../img/pit_probe}	
+\end{frame}
+
+\begin{frame}{Neck Inspection}  
+	Dental mirror:\\
+	\vipict{../img/dental_mirror}
+\end{frame}
+
+\begin{frame}{Neck Inspection}  
+	Opti-viewer:\\
+	\vipict{../img/opti_viewer}	
+\end{frame}
+
+\begin{frame}{Neck Inspection}  
+	Go-NoGo gauge:\\
+	\vipict{../img/valve_go}	
+\end{frame}
+
+\begin{frame}{Cleaning}  
+	Brass or nylon brushes:\\
+	\vipict{../img/brass_brush}	
+\end{frame}
+
+
+%---------------------------------------------------------------------
+%										Procedures
+%---------------------------------------------------------------------
+\section{Procedures}
+Identification
+Preparation
+External visual inspection
+Internal visual inspection
+Neck and threads
+Pressure test
+Inspection of valve
+Final operation
+Rejection
+
+
+
+%---------------------------------------------------------------------
+%										Visual inspection
+%---------------------------------------------------------------------
+\section{Visual inspection}
+
+%---------------------------------------------------------------------
+%										Cylinder Inspection
+%---------------------------------------------------------------------
+\section{Cylinder Inspection}
+
+% ------- Exterior -------
+\subsection{Exterior}
+\begin{frame}{Bow}
+	Slight curve in the sidewall of a cylinder. Not dangerous and does not affect cylinder performance. Commonly know as "banana shape"
+	\vipict{../img/bow}
+\end{frame}
+
+\begin{frame}{Bulges}
+	Visible swelling of the cylinder. Extremely rare and dangerous condition.
+	\vipict{../img/buldge}
+\end{frame}
+
+\begin{frame}{Cuts and digs}
+	Defect that are indicated by removed or upset metal caused by contact with a sharp object.
+	\vipict{../img/cut}
+\end{frame}
+
+\begin{frame}{Dents}
+	Deformation of the cylinder caused by a blunt object so that the metail is relocated and the wall thickness is not reduced.
+	\vipict{../img/dent}
+\end{frame}
+
+\begin{frame}{Fire damage}
+	Excessive general or localized heating of a cylinder.
+	\vipict{../img/fire}
+\end{frame}
+
+% ------- Interior -------
+\subsection{Interior}
+\begin{frame}{Crack}
+	Split or rift in the metal.
+	\vipict{../img/crack}
+\end{frame}
+
+\begin{frame}{Fold and valley}  
+	Sharp visual groove (fold) or shallow and smooth depression (valley), usually found in the crown area
+	\vipict{../img/fold}
+\end{frame}
+
+\begin{frame}{General corrosion and rust}  
+	Uniform loss of metal reducing the wall thickness
+	\vipict{../img/corrosion}
+\end{frame}
+
+\begin{frame}{Corrosion pits}  
+	Corrosion forming isolated craters, without significant alignment
+	\vipict{../img/pit}
+\end{frame}
+
+% ------- Chapter review -------
+\subsection{Chapter review}
+
+\begin{frame}{Chapter 4: review}
+	\begin{enumerate}
+		\item \textit{What is corrsion in an aluminium cylinder and how can you identify it?}\\
+				Oxydation of the metal or damage caused by galvanic corrosion.\\
+				Usually appears as a white crust or dust.\\~\\
+		\item \textit{What is corrosion in a steel cylinder called?}\\
+				Rust\\~\\
+		\item \textit{What causes galvanic corrosion?}\\
+				Electrochemical process in which one metal corrodes preferentially to another when both metals are in electrical contact, in the presence of an electrolyte (salt water).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Chapter 4: review}
+	\begin{enumerate}
+		\setcounter{enumi}{3}
+		\item \textit{What causes a tool stop mark and why does it causes us concern in the visual test procedure?}\\
+				The stop mark is caused by a tool stopping in its process, and starting again (threading tap). It can easily be mistaken for a crack.\\~\\ 
+		\item \textit{Explain the difference between broadspread and line corrosion}\\
+				Broadspread: General corrosion over a wide area.\\
+				Line corrosion: String of pits arranged in somewhat of a line.
+	\end{enumerate}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										Rejection and condemnation
+%---------------------------------------------------------------------
+\section{Rejection and condemnation}
+
+\begin{frame}{Criteras}
+	Depend on:
+	\begin{itemize}
+		\item Type of cylinder (alu, steel, composite)
+		\item Law in the country
+		\item Manufacturer recommendations
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Exterior}
+	\begin{description}[leftmargin=3em]
+		\item [Bow] Not an issue\\~\\
+		\item [Bulges] Condemn all of them\\~\\
+		\item [Cuts \& digs] Any cut deeper than $\sfrac{1}{32}"$ ($0.76mm$).\\15\% of the wall thickness if known\\~\\
+		\item [Dents] Any dent deeper than $\sfrac{1}{16}"$ ($1.53mm$)\\Diameter of 	less than $2"$ ($50.8mm$)\\~\\
+		\item [Fire] More than $350^{\circ} F$
+	\end{description}
+\end{frame}
+%---------------------------------------------------------------------
+%										Other services
+%---------------------------------------------------------------------
+\section{Other services}
+\subsection{Valve inspection}
+\subsection{Cylinder cleaning}
+
+\end{document}

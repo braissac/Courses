@@ -1,0 +1,421 @@
+\documentclass[aspectratio=1610,english,14pt]{beamer}
+% Size:  8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt.
+\usepackage{../../shared/tex/mystyle_tdi}
+
+\author[]{Chris Braissant}
+\title[]{VPM - Variable Permeability Model}
+\institute{Ban's Diving Resort}
+
+%---------------------------------------------------------------------
+%										DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+%---------------------------------------------------------------------
+%										THEORY
+%---------------------------------------------------------------------
+\section{Introduction}
+\subsection{Multideco}
+\begin{frame}{}
+	\mypict{../img/multideco}
+\end{frame}
+
+\begin{frame}
+	\mypict{../img/vplanner}
+\end{frame}
+
+\begin{frame}
+	\mypict{../img/baltic}
+\end{frame}
+
+\subsection{Importance to understand VPM}
+\begin{frame}{\insertsubsection}
+	What is that VPM-B and why is it important to know it?
+	\begin{itemize}
+		\item Popular decompression model
+		\item Alternative to Buhlmann ZHL16
+		\item Way to double check your schedule
+		\item Understand your dive profile
+	\end{itemize}
+\end{frame}
+
+\subsection{Objective}
+\begin{frame}{\insertsubsection}
+	Understand:
+	\begin{itemize}
+		\item Buhlmann dissolved model
+		\item Bubbles behaviour
+		\begin{itemize}
+			\item Diffusion with tissue compartment
+			\item Laplace pressure
+			\item Grow or shrink
+			\item Critical radius
+		\end{itemize}
+		\item Principle of VPM model
+		\begin{itemize}
+			\item How the model is made
+			\item Variable permeability
+			\item Bubble crushing
+			\item Algorithm
+			\item Variants
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Outline}
+\begin{frame}{\insertsubsection}
+	Topics:
+	\begin{itemize}
+		\item Dissolved Gas Model (Buhlmann ZHL16)
+		\item Bubble behaviour
+		\item VPM model
+	\end{itemize}
+\end{frame}
+
+\section{Presentation}
+
+%---------------------------------------------------------------------
+%										DISSOLVED GAS
+%---------------------------------------------------------------------
+\subsection{Dissolved Gas Model}
+	\begin{frame}
+		\resizebox{!}{18pt}{\strut\textbf{\insertsubsection}\strut}\\
+		\vfill
+   \end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Buhlmann ZHL16}
+	\begin{itemize}
+	 	\item Gas dissolved in tissue
+		\item 16 tissue compartments
+		\item Compartments on-gas and off-gas a different rates (Half-Time)
+		\item Track supersaturation in the tissue compartments
+		\item Decompression stop when a compartment reaches the M-Value
+		\item Pressure in a tissue compartment ("tissue tension") vary for each compartment
+	 \end{itemize} 
+\end{frame}
+
+%---------------------------------------------------------------------
+%										BUBBLE BEHAVIOUR
+%---------------------------------------------------------------------
+\subsection{Bubble Behaviour}
+	\begin{frame}
+		\resizebox{!}{18pt}{\strut\textbf{\insertsubsection}\strut}\\
+		\vfill
+   \end{frame}
+
+\begin{frame}{\insertsubsection}
+	A bubble will grow if the pressure pushing out is greater than the pressure pushing in
+	\pause\vfill
+	Pressure pushing in:
+	\begin{itemize}
+		\item Ambiant Pressure
+		\item Surface tension (Laplace pressure)
+	\end{itemize}
+	\pause\vfill
+	Pressure pushing out:
+	\begin{itemize}
+		\item Bubble pressure
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\centering\includegraphics[height=0.8\textheight]{../img/bubble.png}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Comportment at saturation:}\\
+	\vfill
+	Equilibrium of pressure: (Stable bubble)
+	$$P_{bubble}=P_{ambiant}+P_{Laplace}$$
+	\pause \vfill
+	Tissue tension around the bubble:
+	$$P_{tissue}=Partial\ pressure\ of\ inert\ gas$$
+	\pause \vfill
+	If the pressure in the bubble is greater than the tissue tension, gas will diffuse out.\\
+	The bubble would then shrink!
+	$$P_{bubble}>P_{tissue}\rightarrow Bubble\ shrinks$$
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Exemple:}\\
+	A diver breating air at 40m:
+	\begin{align*}
+		P_{ambiant}&=5bar\\
+		P_{Laplace}&=0.5bar\\
+		P_{bubble}&=P_{ambiant}+P_{Laplace}=5.5bar
+	\end{align*}
+	\pause
+	Pressure in the tissue compartment:
+	$$P_{tissue}=FN_2*P_{ambiant}=0.79*5=3.95bar$$
+	\pause
+	The bubble pressure in greater than the tissue tension, the bubble would then diffuse out and shrink
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Ascent:}\\ 
+	The ambiant pressure will change quickly and the tissue tension will be delayed (depending on the compartment half-time).\\
+	\pause\vfill
+	The pressure in the bubble would drop below the tissue tension.\\
+	\pause\vfill
+	The gas will diffuse in and the bubble will grow.\\
+	\pause\vfill
+	Hence the decompression stop to allow the tissue compartment and the bubble size to adjust
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Exemple:}\\
+	Same diver as the before, ascending quickly to 20m:
+	\begin{align*}
+		P_{ambiant}&=3bar\\
+		P_{Laplace}&=0.5bar\\
+		P_{bubble}&=3.5bar
+	\end{align*}
+	\pause
+	Pressure in the tissue compartment (don't have time to offgas):
+	$$P_{tissue}=3.95bar$$
+	\pause
+	The bubble pressure is lower than the tissue tension, the bubble would then on-gas and grow
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Bubble radius:}\\
+	Another factor will affect the growth of a bubble: its radius\\
+	\pause \vfill
+	The Laplace pressure is directly linked to the bubble radius. As a bubble grows, its "skin" becomes thiner, and the Laplace pressure decreases\\
+	\pause \vfill
+	The bubble pressure will also decrease, and the bubble will grow faster!\\
+	\pause \vfill
+	Large bubbles grow, small bubbles shrink
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Critical radius:}\\ 
+	Maximum radius a bubble can have to maintain an adequate Laplace pressure\\
+	\pause\vfill
+	Bubbles models try to control the size of the bubbles\\
+	\pause\vfill
+	Under a critical radius, bubble will shrink as the diver ascent
+\end{frame}
+
+%---------------------------------------------------------------------
+%										VPM
+%---------------------------------------------------------------------
+\subsection{VPM: Variable Permeability Model}
+	\begin{frame}
+		\resizebox{!}{18pt}{\strut\textbf{\insertsubsection}\strut}\\
+		\vfill
+   \end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{VPM: Variable Permeability Model}
+	\begin{itemize}
+		\item Same idea as Buhlamnn dissolved gas model 
+		\item 16 compartment tracking dissolved inert gases
+	 	\item Add a single bubble to each compartment
+		\item 16 bubbles in those compartments
+		\item Dissolved gas and free gases (bubbles) interacting
+	 \end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{Specific properties:}
+	\begin{itemize}
+		\item Specific size indicated by its radius
+		\item Varying permeability
+		\item Defined skin
+		\item Eleasticity and memory
+		\item Gas pressure inside the bubble
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Variable Permeability:}
+	\begin{itemize}
+		\item "Skin" made of tiny balls (molecules)
+		\item Dissolved gases from the tissue compartment diffuse through the skin (around the tiny balls)
+		\item When the ambiant pressure increase, the bubble is compressed and the skin becomes impermeable
+		\item Further crushing becomes more difficult
+		\item Hence its name: Variable Permeablilty Model
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\textbf{Bubble crushing:}\\
+	During the descent:
+	\begin{itemize}
+		\item Ambiant pressure increase
+		\item Compartments on-gas follwing Buhlmann model
+		\item Tissue tension in the compartment increase
+		\item Bubbles are crushed
+		\item Bubbles in slow compartement crush faster than in fast compartment 
+	\end{itemize}
+	\pause \vfill
+	Remark:\\
+	The bubble's size is linked to difference of pressure between the ambiant pressure and the tissue tension
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{VPM Algorithm:}
+	\begin{itemize}
+		\item Buhlmann track dissolved gases in the tissues compartment (tissu tension)
+		\item VPM track the bubbles' radius
+		\item VPM calculates bubbles' pressures during the ascent
+		\item Bubbles grow only when pressure of the bubble exceed the tissue tension (VPM vs Buhlmann)
+		\item Decompression stop before a bubble starts to grow
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	Original VPM algorithm\\
+	\begin{itemize}
+		\item Too conservative
+		\item "no-bubble-growth model"
+	\end{itemize}
+	\pause \vfill
+	Modifications made:
+	\begin{itemize}
+		\item Body can handle a certain amount of free gas
+		\item DCS over a critical volume
+		\item Allow bubbles from a certain size (critical radius) to grow
+		\item "not-too-much-bubble-growth model"
+	\end{itemize}
+	\pause \vfill
+	Bubble population:
+		\begin{itemize}
+			\item Numerous small bubble, few large bubbles
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	Latest modifications:\\
+	VPM-B:
+	\begin{itemize}
+		\item Incorporates Boyle's law to the bubbles behaviour
+		\item Note bubbles' size at the first stop
+		\item Increase the radius of each bubbles for next stop according to Boyle's law
+		\item Tissue tension allowed for the next stop is reduced due to the larger bubble radius
+		\item Add conservatism to the profile
+	\end{itemize}
+	VPM-B/E:
+	\begin{itemize}
+		\item Add conservatism for extreme dives
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										KEY POINTS
+%---------------------------------------------------------------------
+\section{Summary}
+\subsection{Key points}
+\begin{frame}{\insertsubsection}
+	Key Points:
+	\begin{itemize}
+		\item Buhlmann dissolved model
+		\item Bubbles behaviour
+		\begin{itemize}
+			\item Diffusion with tissue compartment
+			\item Laplace pressure
+			\item Grow or shrink
+			\item Critical radius
+		\end{itemize}
+		\item Principle of VPM model
+		\begin{itemize}
+			\item How the model is made
+			\item Variable permeability
+			\item Bubble crushing
+			\item Algorithm
+			\item Variants
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										IMPORTANCE
+%---------------------------------------------------------------------
+\subsection{Importance to understand VPM}
+\begin{frame}{\insertsubsection}
+	What is that VPM-B and why is it important to know it?
+	\begin{itemize}
+		\item Popular decompression model
+		\item Alternative to Buhlmann ZHL16
+		\item Way to double check your schedule
+		\item Understand your dive profile
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										QUIZZ
+%---------------------------------------------------------------------
+\subsection{Quizz}
+\begin{frame}{\insertsubsection}  
+	\textbf{Question 1:}\\
+	How many tissue compartment does VPM use for it's Buhlmann model?
+	\begin{enumerate}[(a)]
+		\item 8
+		\item 12
+		\item 16
+		\item 24
+	\end{enumerate}
+	\pause
+	\textbf{Answer:}(c)\\
+	The model in that presentation is the Buhlmann ZHL16
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{Question 2:}\\
+	To what kind of model does the Buhlmann ZHL belongs to?
+	\begin{enumerate}[(a)]
+		\item Dissolved Model
+		\item Bubble Model
+		\item Reduced Gradient Model
+		\item Variable Permeability Model
+	\end{enumerate}
+	\pause
+	\textbf{Answer:}(a)
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{Question 3:}\\
+	Why would a bubble grow
+	\begin{enumerate}[(a)]
+		\item Pressure pushing in greater than pressure pushing out
+		\item Tissue tension greater than bubble pressure
+		\item Skin becomes impermeable
+		\item Ambiant pressure increase
+	\end{enumerate}
+	\pause
+	\textbf{Answer:}(b )
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{Question 4:}\\
+	Why does a bubble becomes impermeable?
+	\begin{enumerate}[(a)]
+		\item High pressure squeezes molecules against each other
+		\item The thickness of the skin is too small
+		\item Tissue tension exceed the M-Value
+		\item Bubble pressure in null
+	\end{enumerate}
+	\pause
+	\textbf{Answer:}(a)
+\end{frame}
+
+\begin{frame}{\insertsubsection}  
+	\textbf{Question 5:}\\
+	What is the main reason of DCS according to VPM model?
+	\begin{enumerate}[(a)]
+		\item Tissue tension exceeding the M-Value
+		\item Amount of free gas in the body
+		\item Supersaturation of the tissue compartment
+		\item The size of the bubble in the slow compartment
+	\end{enumerate}
+	\pause
+	\textbf{Answer:}(b)
+\end{frame}
+
+\end{document}

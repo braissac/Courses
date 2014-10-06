@@ -1,0 +1,150 @@
+\ProvidesPackage{../../shared/tex/mystyle}
+
+%---------------------------------------------------------------------
+%										PACKAGES
+%---------------------------------------------------------------------
+
+\usepackage{helvet}	% Helvetica font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath,amssymb,xfrac} % Math
+\usepackage{mathtools} % Math
+\usepackage{multicol}
+\usepackage{transparent,framed,color}
+\usepackage{multimedia}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{tabularx} % Tabular
+\usepackage{graphicx,tikz} % Pictures and path
+
+%---------------------------------------------------------------------
+%										COMMANDS
+%---------------------------------------------------------------------
+
+% Image
+\newcommand{\mypict}[1]{%
+	\begin{center}
+		\includegraphics[width=0.9\linewidth,height=0.8\textheight,keepaspectratio]{#1}
+	\end{center}
+}
+
+% Background
+\newcommand{\backgroundimg}{../../shared/pdf/background_1610.pdf}
+
+%---------------------------------------------------------------------
+%										EQUATION
+%---------------------------------------------------------------------
+
+% Margin around equation
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{0pt}
+  \setlength\belowdisplayskip{10pt}
+}
+
+%---------------------------------------------------------------------
+%										BEAMER THEME
+%---------------------------------------------------------------------
+
+% Theme
+\usetheme{default}
+
+% Change the color theme
+\definecolor{mblack}{RGB}{0,0,0}
+\definecolor{mgray}{RGB}{100, 100, 100}  
+\definecolor{mwhite}{RGB}{255, 255, 255}
+\definecolor{mred}{RGB}{230, 27, 0}
+
+\setbeamercolor{palette sidebar}{parent=palette}
+
+% Text in white, no background
+\setbeamercolor{normal text}{fg=mwhite}
+\setbeamercolor{structure}{fg=mwhite}
+\setbeamerfont{structure}{textcolor=mwhite}
+
+% Sidebar
+\setbeamercolor{section in sidebar}{fg=mwhite}
+\setbeamercolor{section in sidebar shaded}{fg=mgray}
+\setbeamercolor{subsection in sidebar}{fg=mwhite}
+\setbeamercolor{subsection in sidebar shaded}{fg=mgray}
+
+% Item
+\setbeamercolor{item}{fg=mwhite}
+\setbeamercolor{subitem}{parent=item}
+\setbeamercolor{subsubitem}{parent=subitem}
+
+% Enumerate
+\setbeamercolor{itemize item}{parent=item}
+\setbeamercolor{itemize subitem}{parent=subitem}
+\setbeamercolor{itemize subsubitem}{parent=subsubitem}
+
+% Description
+\setbeamercolor{description item}{parent=item}
+
+% Sidebar
+\useoutertheme[height=0pt,hideothersubsections]{sidebar}
+
+% Add a line to the sidebar
+\addtobeamertemplate{sidebar left}
+  {}
+  {\smash{\hspace*{\beamer@sidebarwidth}\textcolor{mgray}{\rule{1pt}{\paperheight}}}}
+
+% Frametitle
+\setbeamertemplate{frametitle}[default][center]
+\setbeamerfont{frametitle}{size=\Large}
+
+% Circle for items
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{enumerate items}[default]
+
+% Frame number in the footer
+\setbeamertemplate{footline}[frame number]{}
+\setbeamercolor{page number in head/foot}{fg=fg!50!bg}
+	
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%---------------------------------------------------------------------
+%										BEAMER LAYOUT
+%---------------------------------------------------------------------
+
+% Background
+\setbeamertemplate{background canvas}%
+{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]%
+{\backgroundimg}}
+
+% Center the frametitle
+\addtobeamertemplate{frametitle}{\vspace{6pt}}{\vspace{6pt}}
+
+% Section Title
+% \strut command inserts invisible elements that ensure a guaranteed height:
+\AtBeginSection[]
+{  \begin{frame}
+		\resizebox{!}{18pt}{\strut\insertsection\strut}\\
+		\resizebox{!}{12pt}{\strut}\\
+		\vfill
+   \end{frame}
+}
+
+% Section Title
+% \strut command inserts invisible elements that ensure a guaranteed height:
+\AtBeginSubsection[]
+{  \begin{frame}
+		\resizebox{!}{18pt}{\strut\insertsection\strut}\\
+		\resizebox{!}{12pt}{\strut\insertsubsection\strut}\\
+		\vfill
+   \end{frame}
+}
+
+% Title 
+\setbeamertemplate{title page}
+{ 	\hskip-0\beamer@sidebarwidth\resizebox{!}{12pt}{\strut\insertauthor\strut}\\
+	\hskip-0\beamer@sidebarwidth\resizebox{!}{18pt}{\strut\inserttitle\strut}\\
+	\hskip-0\beamer@sidebarwidth\resizebox{!}{12pt}{\strut\insertinstitute\strut}\\
+	%\hskip-0.5\beamer@sidebarwidth\resizebox{!}{0.5em}{\strut\insertdate\strut}\\
+	\vfill
+}	
+
+\makeatother

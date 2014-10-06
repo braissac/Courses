@@ -1,0 +1,383 @@
+%!TEX program = <pdflatex> 
+
+\documentclass[aspectratio=1610,english,12pt]{beamer}
+
+\usepackage{../../shared/tex/mystyle}
+
+\author[]{Chris Braissant}
+\title[]{TDI Compressor operator}
+\institute{Ban's Diving Resort}
+\date{\today}	
+	
+%---------------------------------------------------------------------
+%										DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+%----- INTRODUCTION -----
+
+\section{Introduction}
+
+\subsection{Intro, Paperwork, Schedule}
+
+\begin{frame}{Course overview}
+	Entry-level course\\
+	Operating principle\\
+	Routine maintenance\\
+	Proper handling\\
+	Filter changing\\
+	Practical part in the workshop\\
+\end{frame}
+
+\begin{frame}{Paperwork}
+	Liability Release and Express Assumption of Risk\\
+	Medical Statement
+\end{frame}
+
+\begin{frame}{Liability Release}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			\mypict{../pdf/misc/Liability}
+		\column{0.4\linewidth}
+			\begin{enumerate}\itemsep0em 
+				\item Compressor Operator
+				\item Your name
+				\item Instr.: Chris Braissant
+				\item Facility: Ban's diving
+				\item Your name
+				\item Instr.: Chris Braissant
+				\item Facility: Ban's Diving
+				\item - blank -
+				\item Training agency:\\TDI/SDI
+				\item Signature and date
+				\item Witness signature and date
+				\item Your initials
+			\end{enumerate}
+	\end{columns}
+\end{frame}
+
+\section{Theory}
+
+\subsection{Heat exchange}
+	\begin{frame}{Polytropic process}
+		A process which occurs with an INTERCHANGE OF BOTH HEAT AND WORK between the system and its surroundings.\par
+		\[ \boxed{PV^n=constant}	 \qquad (n=polytropic \; index)\]
+	\end{frame}
+
+	\begin{frame}{Isothermal process}
+		A process which occurs at CONSTANT TEMPERATURE.\\
+		(Boyle-Mariotte's Law) \par
+		\[ \boxed{PV=constant} \qquad (n=1)\]
+	\end{frame}
+
+	\begin{frame}{Adiabatic process}
+		A process in which heat does not enter or leave the system concerned (all heat is contained).\par
+		\[ \boxed{PV^{\gamma}=constant} \qquad (\gamma=adiabatic \; index) \]
+
+		\vspace{1cm}
+				
+		Monoatomic gas (inert gas)
+		\begin{itemize}
+			\item helium, argon, neon, xenon,...\\ $\gamma = \sfrac{5}{3}$   
+		\end{itemize}
+		Diatomic gas
+		\begin{itemize}
+			\item oxygen, nitrogen, hydrogen, air...\\ $\gamma = \sfrac{7}{5}$ 
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Adiabatic compression}
+		Without going to much into details, the formula to find the temperature after compression in a adiabatic process is:
+		\[ \boxed{ T_2 = T_1 \left( \frac{P_2}{P_1} \right) ^{\frac{\gamma-1}{\gamma}} }\]
+		The temperature after compression is independant of the volume (or size) of a compressor.\\Only the pressures and the ambiant temperature could change the final temperature.
+	\end{frame}
+
+	\begin{frame}{Adiabatic compression}
+		\mypict{../pdf/Periodic_table}
+	\end{frame}
+
+	\begin{frame}{Adiabatic compression}
+		\mypict{../pdf/Adiabatic_temperature}
+	\end{frame}
+
+\section{Compressor design}
+
+\subsection{Single stage}
+
+	\begin{frame}{Single stage's design}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../pdf/single_stage}
+			\column{0.7\linewidth}
+				A compressor's stage is composed of:
+				\begin{itemize}
+					\item Inlet and outlet pipe
+					\item Inlet and outlet valve
+					\item Cylinder
+					\item Piston - compressing the air in the chamber
+					\item Piston rings - making a seal between the piston and the cylinder 
+					\item Rod - connecting the crankshaft to the piston
+					\item Crankshaft - moving the piston up and down (not on the drawing)
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Single stage's design}
+		\mypict{../pdf/single_acting}
+	\end{frame}
+
+	\begin{frame}{Compressor phases}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../pdf/single_stage_1}
+			\column{0.7\linewidth}
+				First phase:
+				\begin{itemize}
+					\item Inlet valve is open
+					\item Outlet valve is closed
+					\item The chamber is filled with low pressure air
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Compressor phases}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../pdf/single_stage_2}
+			\column{0.7\linewidth}
+				Second phase:
+				\begin{itemize}
+					\item Piston starts to go upward
+					\item Pressure increase in the piston
+					\item Inlet valve is closed
+					\item Pressure not sufficient enough to open the outlet valve
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Compressor phases}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../pdf/single_stage_3}
+			\column{0.7\linewidth}
+				Thrid phase:
+				\begin{itemize}
+					\item Piston reaches the maximum stroke
+					\item Pressure open the outlet valve
+					\item High pressure air leave the chamber
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Compressor phases}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../pdf/single_stage_4}
+			\column{0.7\linewidth}
+				Fourth phase:
+				\begin{itemize}
+					\item Piston goes downward
+					\item Pressure drops in the piston
+					\item Inlet valve is open
+					\item Outlet valve is closed
+					\item The chamber is filled with low pressure air
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Compressor valves}
+		\begin{columns}[onlytextwidth]
+			\column{0.3\linewidth}
+				\mypict{../img/Valve.jpg}
+			\column{0.7\linewidth}
+				\begin{itemize}
+					\item Same principle as a dump valve
+					\item Pressure push intermediate plate
+					\item Spring are compressed
+					\item Air can flow through the gap
+				\end{itemize}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Compressor valves}
+		\mypict{../img/Valve.jpg}
+	\end{frame}
+
+	\begin{frame}{Temperature}
+		The temperature of the gas after compression can be determined using the formulas seen before:
+			\[ \boxed{T_2 = T_1 \left( \frac{P_2}{P_1} \right) ^{\frac{\gamma-1}{\gamma}}} \]
+		which give us a temperature of $1257 [^{\circ}C]$ !!!\par
+		\vfill		
+		\begin{tabularx}{\linewidth}{X l}
+			Temp. before compression: & $T_1 = 27 [^{\circ}C]=300[K]$\\
+			Pressure before compression: & $P_1 = 1 bar$\\
+			Pressure after compression: & $P_2 = 300 bar$ \\
+			Adiabatic index: & $\gamma = \sfrac{7}{5} \Rightarrow {\frac{\gamma-1}{\gamma}}=\sfrac{2}{7}$
+		\end{tabularx}
+	\end{frame}
+
+	\begin{frame}{Temperature}
+		The temperature of the gas after compression can be determined using the formulas seen before:
+		\begin{align*}
+			T_2 	= T_1 \left( \frac{P_2}{P_1} \right) ^{\frac{\gamma-1}{\gamma}}
+					= 300 \left( \frac{300}{1} \right) ^{\frac{2}{7}}
+					= 1530 [K]
+					= 1257 [^{\circ}C]
+		\end{align*}
+	\end{frame}
+
+%\subsection{Chemical reactions}
+%\subsection{Compression rates and heat}
+%
+%\section{Mechanical operation}
+%\subsection{Starting and stopping}
+%\subsubsection{Electrical engine}
+%\subsubsection{Fuel engine}
+%\subsubsection{Diesel engine}
+%
+%\subsection{Bleeding and pressure releases}
+%\subsubsection{Drains}
+%\subsubsection{Safety valves}
+%\subsubsection{PMV}
+%
+%\section{Tech related}
+%\subsection{Oxygen clean air creation}
+%\subsubsection{Oxygen less / free}
+%\subsubsection{Inline filter}
+%
+%\subsection{DIN valve use}
+%\subsection{Air Bank systems}
+%\subsubsection{Air bank}
+%\subsubsection{Blending panel}
+%
+%\section{Logging}
+%\subsection{Pre Operation checks}
+%\subsubsection{Check list}
+%\subsubsection{Maintenance}
+%
+%\subsection{Monitoring filter life}
+%\subsubsection{Log book}
+%\subsubsection{Electronic devices}
+%
+%\section{Remote}
+%\subsection{Using petrol powered engines}
+%\subsection{Planning compressor size based on needs}
+%\subsection{Estimating output based on compressors}
+%
+%\section{Mixing procedures}
+%\subsection{Partial pressure blending}
+%\subsection{Continuous blending}
+%\subsection{Membrane separation system}
+
+
+%%%%%%%%%%%%%%%%%%%% FILTRATION %%%%%%%%%%%%%%%%%%%%
+\section{Filtration}
+
+\subsection{Air Quality}
+
+\begin{frame}{Air Quality}
+	\begin{tabularx}{\linewidth}{|X|c|c|c|c|}
+		\hline	& EN12021 & BS4275 & $O_2$ Clean Air & PADI 5 stars \\ \hline
+		Oxygen 	& \multicolumn{4}{c|}{$21 \pm 1\%$}\\ \hline
+		$CO_2$	& \multicolumn{4}{c|}{$<500ppm$}\\ \hline
+		$CO$		& $<15ppm$	& $<5ppm$	& $<5ppm$	& $<10ppm$\\ \hline
+		Oil		& $<0.5ppm$	& $<0.5ppm$	& $<0.3ppm$	& $<5ppm$\\ \hline
+		Water	& \multicolumn{3}{c|}{$<25mg/m^2$} & Not specified \\ \hline
+		Odor / taste			& \multicolumn{4}{c|}{None}\\ \hline	
+	\end{tabularx}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%% RUNNING %%%%%%%%%%%%%%%%%%%%
+\section{Starting and running}
+
+% COMPRESSOR
+\subsection{Compressor}
+\begin{frame}{Compressor pre-startup checks}
+	\begin{itemize}
+		\item Oil level
+		\item Input filter
+		\item Output filter
+		\item Fan belt
+		\item Hoses
+		\item Filter towers
+		\item Log book
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Compressor startup sequence}
+    \begin{itemize}
+    	\item Condensate drains
+    	\item Drain valves opened
+    	\item All Gauges at zero
+    	\item Start compressor
+    	\item Clacking noise from 3rd stage
+    	\item Close drain valves
+    	\item Pressure maintaining valve (PMV)
+    	\item Safety valves goes off
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Compressor shut sown sequence}
+	\begin{itemize}
+		\item Open drain valves
+		\item Gauges going down
+		\item Turn off engine / motor
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Compressor runinng tests}
+    \begin{itemize}
+    	\item RPM - Motor speed
+    	\item Vibration
+    	\item Condensate every x minutes
+    	\item Filter
+    \end{itemize}
+\end{frame}
+
+% PETROL
+\subsection{Petrol engine}
+\begin{frame}{Petrol engine pre-startup checks}
+	\begin{itemize}
+			\item Oil level
+			\item Input filter
+			\item Spark plug
+			\item Petrol level
+		\end{itemize}	
+\end{frame}
+
+\begin{frame}{Petrol engine startup sequence}
+	\begin{itemize}
+		\item Turn fuel ON
+		\item Turn ignition ON
+		\item Place choke on COLD START position
+		\item Set throttle to 1/3 full speed
+		\item Slowly pull starter cord to remove slack
+		\item Sharply pull starter cord
+		\item Set throttle to full speed
+		\item Place choke on WARM/RUN position
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Petrol engine switch off sequence}
+	\begin{itemize}
+		\item Slowwly set throttle to minimum speed
+		\item Turn fuel OFF until motor stop
+		\item Turn ignition OFF
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%% SOURCES %%%%%%%%%%%%%%%%%%%%
+\section{Sources}
+\begin{frame}{Sources}
+    \begin{itemize}
+    	\item url
+  %  	\item \hyperlink{}{http://en.wikipedia.org/wiki/Gas_compressor}
+   % 	\item \hyperlink{}{http://en.wikipedia.org/wiki/Adiabatic_process}
+    \end{itemize}
+\end{frame}
+\end{document}

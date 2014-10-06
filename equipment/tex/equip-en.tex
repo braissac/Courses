@@ -1,0 +1,1250 @@
+\documentclass[aspectratio=1610,english,12pt]{beamer}
+
+\usepackage{../../shared/tex/mystyle}
+
+\author[]{Chris Braissant}
+\title[]{SDI Equipment Specialist}
+\institute{Ban's Diving Resort}
+
+%---------------------------------------------------------------------
+%										DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\section{Introduction}
+
+\subsection{Overview}
+\begin{frame}{\insertsubsection}
+	The aim of the course is to see and understand the principles of operation of the diving equipment\\
+	The course will cover various subject as maintenance and repair of regulators, valves, BCD's, cylinders and dry suit.
+\end{frame}
+
+\subsection{Paperwork}
+\begin{frame}{\insertsubsection}
+	Liability Release and Express Assumption of Risk\\
+	Medical Statement
+\end{frame}
+
+\subsection{Liability Release}
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			\mypict{../pdf/misc/Liability}
+		\column{0.4\linewidth}
+			\begin{enumerate}\itemsep0em 
+				\item Equipment Specialist
+				\item Your name
+				\item Instr.: Chris Braissant
+				\item Facility: Ban's diving
+				\item Your name
+				\item Instr.: Chris Braissant
+				\item Facility: Ban's Diving
+				\item - blank -
+				\item Training agency:\\TDI/SDI
+				\item Signature and date
+				\item Witness signature and date
+				\item Your initials
+			\end{enumerate}
+	\end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										THEORY
+%---------------------------------------------------------------------
+\section{Basic Theory}
+
+% ----- UNITS -----	
+\subsection{Units Conversion}
+
+\begin{frame}{Units systems}  
+	The two most common units system used worldwide are:
+	\begin{itemize}
+		\item The International System of Units (or metric system)
+		\item The British Imperial System (USA, UK, Myanmar)
+	\end{itemize} 
+\end{frame}
+
+% SI Units
+\begin{frame}{International System of Units}
+	The metric system is based on seven independant SI units.\\
+	Every other quantities are derivated from those seven SI units.\\
+	\vspace{1em}
+	\centering
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Base quantity & Unit & Symbol\\ \hline
+		Length & meter & [m]\\
+		Mass & kilogram & [kg]\\
+		Time & second & [s]\\
+		Electric current & Ampere & [A]\\
+		Temperature & Kelvin & [K]\\
+		Amount of substance & mole & [mol]\\
+		Luminous intenstiy & candela & [cd]\\
+		\hline
+	\end{tabular}
+\end{frame}
+
+% Longeur
+\begin{frame}{Length}
+	SI Units:
+	\[
+		1[mm] \xrightarrow{x10} 1[cm] \xrightarrow{x10} 1[dm] \xrightarrow{x10} 1[m]
+	\]
+	Imperial Units:
+	\[
+		1[inch] \xrightarrow{x12} 1[foot] \xrightarrow{x3} 1[yard] \xrightarrow{x1760} 1[mile]
+	\]
+	Conversion:
+	\begin{align*}
+				1[inch] &= 2.54[cm]\\
+				1[foot] &= 30.48[cm]\\
+				1[yard] &= 0.914[cm]\\
+				1[mile] &= 1.6[km]
+	\end{align*}			
+\end{frame}
+
+\begin{frame}{SI vs Imperial}  
+	\mypict{../img/imperial-units}
+\end{frame}
+
+% Area
+\begin{frame}{Area}
+	SI:
+	\begin{align*}
+		1m \times 1m &= 1[m^2]\\
+		1cm \times 1cm &= 1[cm^2]
+	\end{align*}
+	Imperial:
+	\begin{align*}
+		1" \times 1" &= 1[sq\ in]
+	\end{align*}
+	Conversion:
+	\begin{alignat*}{2}
+				1[sq\ in] &= 2.54 \times 2.54	&	&= 6.45[cm^2]\\
+	\end{alignat*}
+\end{frame}
+
+% Volume
+\begin{frame}{Volume}
+	SI Units:
+	\begin{alignat*}{2}
+				1[m] \times 1[m] \times 1[m] &= 1[m^3] \\
+				1[dm] \times 1[dm] \times 1[dm] &= 1[dm^3] = 1 liter\\
+				1[cm] \times 1[cm] \times 1[cm] &= 1[cm^3]\\
+	\end{alignat*}
+	Imperial:
+	\begin{alignat*}{3}
+				1[inch] \times 1[inch] \times 1[inch] &= 1" \times 1"	 \times 1"	&	&= 1[cu\ in]\\
+				1[foot] \times 1[foot] \times 1[foot] &= 1' \times 1'	 \times 1'	&	&= 1[cu\ ft]\\
+	\end{alignat*}
+	Conversion:
+	\begin{alignat*}{2}
+				1[cu\ ft] &= 30.48 \times 30.48 \times 30.48 &	&= 28.3 [dm^3] = 28.3 liter\\
+	\end{alignat*}
+\end{frame}
+
+% Poids et masse
+\begin{frame}{Mass and weight}
+	Mass\\
+	\begin{tabular}{p{0.3\linewidth} l}
+		$1 kg$ & $\approx 2.2 lbs$ \\
+		$1 lbs$ & $\approx 0.45 kg$ \\
+		$1 m^3$ & $1000 kg$ of fresh water\\
+		& $1030 kg$ of salt water\\
+		& $ 1.239 kg$ of air
+	\end{tabular}
+	\\
+	\begin{tabular}{p{0.3\linewidth} l}
+		$1kg$ & $\approx9.81N$
+	\end{tabular}
+\end{frame}
+
+% Pression
+\begin{frame}{Pressure}
+	Pascal\\
+	\begin{tabular}{p{0.2\linewidth} p{0.4\linewidth} l}
+		$1 Pa$ & $1 Newton/m^2$ & $0.1kg/m^2$
+	\end{tabular}\\
+	Bar\\
+	\begin{tabular}{p{0.2\linewidth} p{0.4\linewidth} l}
+		$1 bar$ & $100'000Pa$ & $0.1MPa$\\
+		$1 bar$ & $0.981kg/cm^2$ & $\approx1kg/cm^2$
+	\end{tabular}\\
+	PSI\\
+	\begin{tabular}{p{0.2\linewidth} p{0.4\linewidth} l}
+		$1 PSI$ & $1lbs/sqi$&\\
+		$1 PSI$ & $0.45kg/6.45cm^2$ & $0.068bar$\\
+		$\rightarrow$ & $1bar$ & $14.5PSI$
+	\end{tabular}
+\end{frame}
+
+% Temperature
+\begin{frame}{Temperature}
+	\mypict{../pdf/misc/Temperatures_Units.pdf} \par
+	Formulas:
+		\begin{align*}
+			[^{\circ}C] &= [K]-273 & [K] &= [^{\circ}C]+273\\
+			[^{\circ}C] &= \frac{5}{9}*([^{\circ}F]-32) & [^{\circ}F] &= \frac{9}{5}*[^{\circ}C]+32 &
+		\end{align*}
+\end{frame}
+
+%------ PROPERTIES OF GASES -----
+\subsection{Properties of gases}
+
+% Air
+\subsubsection{Air}
+\begin{frame}{Composition of the air}
+	\begin{description}[lalign=parleft]
+		\item[$78.084\%$]Nitrogen ($N_2$)
+		\item[$20.946\%$]Oxygen ($O_2$)
+		\item[$0.934\%$]Argon ($Ar$)
+		\item[$0.033\%$]Carbon Monoxide ($CO$)
+		\item[$0.003\%$]Other gases
+		\item[]
+		\item[$18.18ppm$]Neon ($Ne$)
+		\item[$5.24ppm$]Helium ($He$)
+		\item[$1.14ppm$]Krypton ($Kr$)
+		\item[$0.09ppm$]Xenon ($Xe$)
+	\end{description}
+\end{frame}
+
+\begin{frame}{Breathing gases}
+	\begin{description}[lalign=parleft]
+		\item[Nitrogen ($N_2$)]Narcotic
+		\item[Oxygen ($O_2$)]Toxic at high $ppO_2$
+		\item[Helium ($He$)]Distortion of voice 
+		\item[Neon ($Ne$)] Dense, long decompression, expensive 
+		\item[Hydrogen ($H$)] Explosive with more than $4\%$ of Oxygen
+		\item[Argon ($Ar$)]Narcotic, dense, hard to breathe
+		\item[Xenon ($Xe$)]Narcotic, anesthetic, expensive
+	\end{description}
+\end{frame}
+
+% Mix
+\begin{frame}{Gas mixing}
+	\begin{description}
+		\item[Nitrox]Nitrogen and Oxygen
+		\item[Heliox]Helium and Oxygen
+		\item[Trimix]Oxygen, Helium and Nitrogen (ex; TMX 18/45)
+		\item[Heliair]Helium and Air ("Poor man's trimix")
+		\item[Hydrox]Hydrogen and Oxygen
+ 		\item[Hydreliox]Hydrogen, Helium and Oxygen
+	\end{description}
+\end{frame}
+
+% N2
+\subsubsection{Nitrogen ($N_2$)}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Diatomic ($N_2$)
+		\item Physiological inert
+		\item High Density
+		\begin{itemize}\item High respiratory effort at depth\end{itemize}
+		\item Narcotic effect
+		\begin{itemize}\item At high partial pressure ($ppN_2 > 3.2$)\end{itemize}
+		\item Decompression sickness
+		\begin{itemize}\item Unmetabolized by the body - Bubble formation\end{itemize}
+		\item Doesn't dissolve in water
+		\begin{itemize}\item but easily in grease and oil (fat tissue)\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Decompression sickness
+		\begin{enumerate}[I]
+			\item Pain
+			\item CNS (Central Nervous System) and pain
+			\item Severe type I and II \\ Suffocation \\ Isobaric Counter Diffusion (Trimix)
+			\item Long term exposure \\ "Osteonecrosis" = bones' death
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+% O2
+\subsubsection{Oxygen {$O_2$}}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Diatomic ($O_2$)
+		\item Support combustion
+		\begin{itemize}
+			\item Violently at high pressure
+		\end{itemize}
+		\item Essentiel for life
+		\begin{itemize}
+			\item Not enough = Hypoxia
+			\item Too much = Hyperoxia
+		\end{itemize}
+		\item Odorless, colorless, tasteless
+		\item NON-flammable
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{description}
+		\item[Anoxic]No oxygen at all
+		\item[Hypoxic]Lower than normal partial pressure of oxygen
+		\item[Normxic]Normal partial pressure of oxygen
+		\item[Hyperoxic]Higher partial pressure of oxygen
+	\end{description}
+\end{frame}
+
+\begin{frame}{Oxygen Exposure}
+	\mypict{../pdf/misc/Graph_O2_Exposure.pdf}
+\end{frame}
+
+% CO2
+\subsubsection{Carbon Dioxide ($CO_2$)}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Waste product of the metabolism
+		\item 5\% respiratory problem
+		\item 10\% respiratory distress
+		\item Enhanced by "Dead space"
+		\item 1\% of $CO_2$ in the air double $CO_2$ level in the blood at 40m
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/misc/Graph_CO2.pdf}
+\end{frame}
+
+% CO
+\subsubsection{Carbon Monoxide ($CO$)}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Extremely toxic
+		\item Odorless, colorless, tasteless
+		\item Product of combustion
+		\begin{itemize}
+			\item Poor compressor lubrication
+			\item Poor compressor positioning
+		\end{itemize}
+		\item Hemoglobin bounds 300x easier with $CO$ than with $O_2$
+	\end{itemize}
+\end{frame}
+
+% Helium
+\subsubsection{Helium ($He$)}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Substitut for Nitrogen $N_2$ in deep diving
+		\item Lower respiratory effort
+		\item Reduce narcosis
+		\item Rare gas = expensive!
+		\item High thermal conductivity ($\ne$dry suit)
+		\item HPNS:\\High Pressure Neurological Syndrom
+		\item Special dive tables compulsary
+		\item Limited in recreational diving (price)
+		\item Rebreather more economical
+	\end{itemize}
+\end{frame}
+
+% COMEX
+\subsubsection{Human trials}
+\begin{frame}{COMEX Hydra X (1992)}
+	\begin{itemize}
+		\item Theo Mavrostomos
+		\item Depth of -701m in recompression chamber
+		\item Hydreliox $0.5\% O_2$ / $71.5\% He$ / $28\% H_2$
+		\item Duration
+		\begin{itemize}
+			\item 4 weeks of preparation pre-dive
+			\item 2 days at 10m
+			\item 13 days of compression to -675m
+			\item 3 days between -650 and -675m with a peak to -701m
+			\item 24 days of decompression
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{COMEX Hydra X (1992)}
+	\mypict{../img/ComexHydraX.png}
+\end{frame}
+
+% Temperature 
+\begin{frame}{Temperatures}
+	\begin{description}[lalign=parleft]
+		\item[$-183^{\circ}C$]Oxygen's boiling point
+		\item[$-196^{\circ}C$]Nitrogen's boiling point	
+		\item[$-220^{\circ}C$]Oxygen and Nitrogen are solid
+		\item[$-273^{\circ}C$]Absolut Zero (No particule is moving)
+	\end{description}
+\end{frame}
+
+\begin{frame}{Temperatures}
+		\mypict{../pdf/misc/Graph_Temperatures.pdf}
+\end{frame}
+
+% Lois
+\subsection{Gas laws}
+\begin{frame}{\insertsubsection}
+	Boyle-Mariotte's law
+	\[	P \propto \frac{1}{V} \qquad (T=constant) \]
+	Charles' law
+	\[	V \propto T \qquad (P=constant)\]
+	Gay-Lussac's law:
+	\[ P \propto T \qquad (V=constant)\]
+	Ideal gas law
+	\[	\frac{P_1 x V_1}{T_1} =\frac{P_2 x V_2}{T_2} \]
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	Dalton's law
+	\[ P = PP1 + PP2 + PP3 +... \]
+	Joule-Thomson effect
+	\begin{itemize}
+		\item Phenomenon in which the temperature increases when a gas undergoes adiabatic compression
+	\end{itemize}
+	Henry's law
+	\begin{itemize}
+		\item At constant temperature and at saturation, the amount of gas dissolve in a liquid is proportional to the partial pressure exerted by the gas on the liquid.
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										REGULATORS
+%---------------------------------------------------------------------
+
+\section{Regulators}
+
+%----- Design requirements -----
+\subsection{Design requirements}
+
+% Variables
+\begin{frame}{Variables}
+	\begin{itemize}
+		\item Change in ambiant pressure (depth)
+		\item Change in respiratory volume
+		\item Increase in breathing rate
+		\item Increase in air density
+		\item Friction losses
+		\item Tendency to freeze (Joules-Thompson effect)
+	\end{itemize}
+\end{frame}
+
+% EN250
+\begin{frame}{Standard EN250}
+	\begin{tabular}{l l}
+		Depth: 				& 0-65m\\
+		Respiratory rate:			& 0-25 inspirations/min\\
+		Respiratory volume:		& 2.5 liters\\
+		Respiratory cycle:		& Sinusoidale\\
+		Inhalation resistance:	& 25 mbar (10 inch of water)\\
+		Exhalation resistance:	& 25 mbar (10 inch of water)\\
+		Work of breathing:		& 3.0 joules per litre\\
+		Storage temperature:		& $-40^{\circ}C$ to $80^{\circ}C$ \\
+		Working temperature:		&\\
+		1. Cold water 				& $0^{\circ}C$ to $50^{\circ}C$\\
+		2. Warm water				& $10^{\circ}C$ to $50^{\circ}C$\\
+		Pressure:					& $35-200 bar$ (A-Clamp)\\
+										& $35-300 bar$ (DIN)
+	\end{tabular}
+\end{frame}
+
+% WOB
+\begin{frame}{Work of breathing}
+	\mypict{../pdf/misc/Breathing_Resistance_EN}
+\end{frame}
+
+% Compensation
+\begin{frame}{Types of compensation}
+	\begin{itemize}
+		\item Compensation of ambiant pressure
+		\begin{itemize}
+			\item Linked to the depth
+			\item Increase the intermediate pressure
+			\item All regulators are made that way
+		\end{itemize}
+		\item Compensation of pressure loss
+		\begin{itemize}
+			\item Linked to the pressure in the tank
+			\item Reduced pressure in the cylinder causes a decrease in the intermediate pressure 
+			\item Compensation to provide a stable pressure
+			\item Only some regulators (Balanced regulators)
+		\end{itemize}		
+	\end{itemize}
+\end{frame}
+
+%----- PRINCIPLE -----
+\subsection{Principle}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			The force exerted on an object depends on the surface and the pressure applied.\par
+			To create a stable system, the forces at each end of the piston must be identical.
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			When the intermediate pressure is high enough, the piston will close the orifice and the system will be stable.
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			Definitions:
+			\begin{align*}
+				D &= Diameter [cm] \\
+				S &= Surface [cm^2] \\
+				  &= \tfrac{\pi*D^2}{4} \\
+				\\
+				P &= Pressure [bar] \\
+				F &= Force [\sfrac{kg}{cm^2}]\\
+				  &= P*S \\		
+			\end{align*}
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			Orifice:
+			\begin{align*}
+				D_{orifice} &= 0.447[cm] \\
+				S_{orifice} &= \tfrac{\pi*0.447^2}{4}\\
+				  &= 0.157[cm^2] \\
+				F_{orifice} &= 200*0.157\\
+				  &= 31.4 [\sfrac{kg}{cm^2}]
+			\end{align*}
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			Piston:
+			\begin{align*}
+				D_{piston} &= 2[cm] \\
+				S_{piston} &= \tfrac{20*{D_{p}}^2}{4}\\
+				  &= 3.14[cm^2] \\
+				F_{piston} &= F_{orifice}\\
+				P_{piston} &= \tfrac{F_p}{S_p}\\
+				  &= \tfrac{31.4}{3.14}\\
+				  &= 10 [bar]
+			\end{align*}
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			Problem:
+			\begin{itemize}
+				\item When the pressure in the tank decrease, the intermediate pressure will drop.
+				\item This system in a pressure divider (ratio 1:20) and not a regulator.
+			\end{itemize}
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_1} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			To compensate the pressure drop in the tank, a spring is add to the system\\
+			$$F_{piston}=F_{orifice}+F_{spring}$$
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_2} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			The intermediate pressure can now be adjusted by changing the caracteristics of the spring. 
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_2} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			Finally, the piston is drilled to allow the air to flow through to the other side.
+		\column{0.4\linewidth}
+			\mypict{../pdf/1st/Piston_3} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+			\mypict{../pdf/1st/Bal_vs_Unbal}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										1st STAGES
+%---------------------------------------------------------------------
+\subsection{First stage}
+
+\begin{frame}{Design types}
+	\begin{itemize}
+		\item Unbalanced piston
+		\item Balanced Piston
+		\item Unbalanced diaphragm
+		\item Balanced diaphragm
+	\end{itemize}
+\end{frame}
+
+% Unbalanced Piston
+\subsubsection{Unbalanced piston}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/1st/1st_piston_unbal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_MK2}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Cheap
+			\item Easy to service
+			\item Strong and durable
+			\item Perfect for dive school
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Limited performances
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Aqualung Calypso
+			\item Scubapro MK2
+			\item US Divers Conshelf
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Balanced Piston
+\subsubsection{Balanced piston}
+\begin{frame}{\insertsubsection}
+	\mypict{../pdf/1st/1st_piston_bal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_MK25}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_MK25_exploded}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Safe and reliable
+			\item Excellent performance
+			\item Strong
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Expensive
+			\item Prone to freeze ("flow-through" piston)
+			\item Complicated to service
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Halcyon H-75P
+			\item Scubapro MK20, MK25
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Unbalanced Diaphragm
+\subsubsection{Unbalanced diaphragm}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/1st/1st_dia_unbal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Not common
+		\item Pros
+		\begin{itemize}
+			\item Increase in intermediate pressure when cylinder pressure drops
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Needs a second stage which can handle a higher intermediate pressure
+			\item Harder to breathe at the begining of the dive
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item None availaible on the market
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Balanced Diaphragm
+\subsubsection{Balanced diaphragm}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/1st/1st_dia_bal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_MK17}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_MK17_exploded}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Most common regulator
+		\item Pros
+		\begin{itemize}
+			\item Simple but effective
+			\item Easily set up for cold water
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Doesn't like being flooded
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Apeks (All)
+			\item Aqualung Legend, Glacia,...
+			\item Halcyon H-50D
+			\item Mares Abyss, Prestige,...
+			\item Scubapro MK11, MK17
+			\item Poseidon Jetstream
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.6\linewidth}
+			\begin{itemize}
+				\item Poseidon Xstream
+				\begin{itemize}
+					\item The seat is replaced by a ball closing the orifice
+					\item The needle act on the ball the same way as on the seat
+					\item A spring hold the ball in place
+				\end{itemize}
+			\end{itemize}
+		\column{0.4\linewidth}
+			\mypict{../img/Poseidon_Xstream}
+	\end{columns}
+\end{frame}
+
+% Options
+\subsubsection{First stage options}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Anti-freeze system
+		\begin{itemize}
+			\item Ambiant pressure filled with grease
+			\item Cap filled with grease
+			\item Diaphragm filled with oil
+			\item Diaphragm with piston or "load transmitter" \\ (Most common)
+			\item Dry ambiant pressure by "Dry bleed" (Controled leak of the first stage)
+			\item "Condom and vodka"!
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										2nd STAGES
+%---------------------------------------------------------------------
+\subsection{Second Stages}
+
+% Differents types
+\begin{frame}{Design types}
+	\begin{itemize}
+		\item Upstream valve
+		\item Unbalanced downstream
+		\item Balanced downstream
+		\item Servo or pilot valve
+	\end{itemize}
+\end{frame}
+
+% Upstream
+\subsubsection{Upstream valve}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/2nd/2nd_upstream}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Simple
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Upstream design\\ Need a pressure relief valve (PRV)
+			\item Limited performances
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item None availaible on the market
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+% Downstream unbalanced
+\subsubsection{Unbalanced downstream}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/2nd/2nd_DS_unbal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Cheap
+			\item Easy to service
+			\item Perfect for dive school
+			\item Downstream design \\ (Act as a pressure relief valve)
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Limited performances
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Aqualung Calypso
+			\item Mares Prestige
+			\item Scubapro R095, R195,...
+			\item US Divers Conshelf
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+% Downstream balanced
+\subsubsection{Balanced downstream}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../pdf/2nd/2nd_DS_bal}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Scubapro_S600_exploded}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Safe and efficient
+			\item Good performances
+			\item Easily adjustable
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Expensive
+			\item Complicated to service
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Apeks (all)
+			\item Aqualung Legend, Glacia
+			\item Scubapro G250, S600, A700,...
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Servo
+\subsubsection{Servo or pilot valve}
+\begin{frame}{\insertsubsubsection}
+	\mypict{../img/Poseidon}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Pros
+		\begin{itemize}
+			\item Efficient
+			\item Good performances
+			\item Don't freeze\\ (no metal part are moving)
+		\end{itemize}
+		\item Cons
+		\begin{itemize}
+			\item Complicated
+			\item Upstream design \\ Need a pressure relief valve
+			\item high inhalation resistance
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Models
+		\begin{itemize}
+			\item Poseidon Jetstream and Xstream
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Options
+\subsubsection{Second stage options}
+\begin{frame}{\insertsubsubsection}
+	\begin{itemize}
+		\item Venturi effect
+		\begin{itemize}
+			\item Reduce respiratory effort
+			\item Tendency to induce a freeflow
+			\item Deflector inside the case modifiying the air flow
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										INFLATORS
+%---------------------------------------------------------------------
+\section{Inflators}
+
+% Hose
+\subsection{Shrader valve}
+\begin{frame}{\insertsubsection}
+	\begin{columns}[onlytextwidth]
+		\column{0.3\linewidth}
+			\mypict{../img/Schrader_valve}
+		\column{0.7\linewidth}
+			The inflator hose are using a Schrader valve.\\
+			A small upstream valve that open when it is pushed.\\
+			When the hose is disconnected, the pressure close the valve and avoid any leak.\\
+			Same valve used for the bike tires!
+	\end{columns}
+\end{frame}
+
+% LDrysuit
+\subsection{Dry suit}
+\begin{frame}{\insertsubsection}
+	\mypict{../img/Drysuit-valve}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\mypict{../pdf/misc/DrySuit-Valve}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										VALVES
+%---------------------------------------------------------------------
+\section{Valves}
+
+%----- CONCEPTION -----
+\subsection{Design}
+
+% K-Valve
+\begin{frame}{K-Valve with burst disc}
+	\mypict{../img/K-Valve}
+\end{frame}
+
+\begin{frame}{K-Valve with burst disc}
+	\mypict{../pdf/misc/Valve}
+\end{frame}
+
+\begin{frame}{K-Valve with burst disc}
+	\mypict{../img/Valve_exploded}
+\end{frame}
+
+% Isolateur
+\begin{frame}{Manifold}
+	\mypict{../img/Manifold}
+\end{frame}
+
+\begin{frame}{Manifold}
+	\mypict{../pdf/misc/Valve_Manifold}
+\end{frame}
+
+% J-Valve
+\begin{frame}{J-Valve}
+	\mypict{../img/J-Valve}
+\end{frame}
+
+\begin{frame}{J-Valve}
+	\mypict{../pdf/misc/J-Valve}
+\end{frame}
+
+% H-Valve
+\begin{frame}{H-Valve}
+	\mypict{../img/H-Valve}
+\end{frame}
+
+% Y-Valve
+\begin{frame}{Y-Valve}
+	\mypict{../img/Y-Valve}
+\end{frame}
+
+% J-Valve
+\begin{frame}{J-Valve with manifold}
+	\mypict{../img/Manifold-old}
+\end{frame}
+
+%----- CONNEXION -----
+\subsection{Output}
+
+\begin{frame}{A-clamp}
+	\begin{columns}[onlytextwidth]
+		\column{0.4\linewidth}
+			\mypict{../img/k_outlet}
+		\column{0.6\linewidth}
+			\begin{itemize}
+				\item Yoke, Int, A-Clamp
+				\item O-ring pinched between the valve and the reg
+				\item Maximum pressure of 232bar
+			\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{DIN}
+	\begin{columns}[onlytextwidth]
+		\column{0.4\linewidth}
+			\mypict{../img/din_outlet}
+		\column{0.6\linewidth}
+			\begin{itemize}
+				\item DIN $G\sfrac{5}{8}"$ ($22.9mm$)
+				\item O-ring compressed inside the valve
+				\item Screwed connection, so extremely strong
+				\item 5 threads for 232 bar
+				\item 7 threads for 300 bar
+			\end{itemize}	 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Insert}
+	\begin{columns}[onlytextwidth]
+		\column{0.4\linewidth}
+			\mypict{../img/pro_outlet}
+		\column{0.6\linewidth}
+			\begin{itemize}
+				\item Convert a DIN to Yoke
+				\item Insert screwed inside a DIN
+				\item Numerous types of valves and insert\\Compatibility not guarranted
+			\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{DIN M26}
+	\begin{columns}[onlytextwidth]
+		\column{0.4\linewidth}
+			\mypict{../img/din_m26}
+		\column{0.6\linewidth}
+			\begin{itemize}
+				\item DIN valve with a bigger diameter ($26mm$)
+				\item Used for oxygen or nitrox tanks
+			\end{itemize} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}{CGA540}
+	\begin{itemize}
+		\item Valve used for pure oxygen tanks
+		\item Connectic metal to metal (brass)
+		\item No o-ring
+		\item Wrench necessary to tighten correctly and avoid any leak
+	\end{itemize}
+	\begin{columns}
+		\column{0.4\linewidth}
+			\mypict{../img/CGA540_fem}
+		\column{0.4\linewidth}
+			\mypict{../img/CGA540_mal}
+	\end{columns}
+\end{frame}
+
+%----- Threads -----
+\subsection{Tank threads}
+
+\begin{frame}{Tank threads}
+	Europe:
+	\begin{itemize}
+		\item $M25*2mm$ DIN (Deutsche Industrial Norm)\\
+			{\o}$=25mm$, $2mm$ between each threads\\
+			\hfill
+		\item $M18*1.5mm$ DIN (Deutsche Industrial Norm)\\
+			{\o}$=18mm$, $1.5mm$ between each threads\\
+			\hfill
+		\item $G \sfrac{3}{4}*14$ BSP (British Standard Pipe)\\
+			{\o}$=26.4mm$, 14 threads per inch\\
+			\hfill
+	\end{itemize}
+	USA (and worldwide):
+	\begin{itemize}
+		\item $\sfrac{3}{4}"*14$ NPSM\\
+			(National Pipe Straight Mecanical)\\
+			{\o}$=26.4mm$, 14 threads per inch\\
+			\hfill
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Tank threads}
+	\begin{block}{ATTENTION}
+		\begin{itemize}
+			\item British $G \sfrac{3}{4}"$ and American $\sfrac{3}{4}"$ NPSM are really close but not 	compatible
+			\item	The shape of the threads are not the same
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%---------------------------------------------------------------------
+%										CYLINDERS
+%---------------------------------------------------------------------
+\section{Cylinders}
+
+%----- MATERIAL -----
+\subsection{Material}
+
+% ALU
+\begin{frame}{Aluminium alloy}
+	\begin{itemize}
+		\item Pros:
+			\begin{itemize}
+				\item Don't rust!
+				\item Don't need to be painted
+			\end{itemize}
+		\item Cons
+			\begin{itemize}
+				\item Positively buoyant when empty
+				\item Galvanic corrosion with brass (valve) and steel (cam bands)
+				\item Maximum temperature: $150^\circ C$
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% acier
+\begin{frame}{Steel}
+	\begin{itemize}
+		\item Pros:
+			\begin{itemize}
+				\item Strong
+				\item Negatively buoyant when empty\\(less weight needed)
+				\item Higher working pressure($232bar$)
+				\item Lighter
+				\item Maximum temperature: $300^\circ C$
+			\end{itemize}
+		\item Cons:
+			\begin{itemize}
+				\item Rust!!!
+				\item Need to be painted
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% Carbone
+\begin{frame}{Carbon fiber}
+	\begin{itemize}
+		\item Pros:
+			\begin{itemize}
+				\item High pressure ($300bar$)
+				\item Light
+			\end{itemize}
+		\item Cons:
+			\begin{itemize}
+				\item Fragile!
+				\item Distinctive visual and hydrostatic inspections 
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%----- COMPARISON -----
+\subsection{Comparison}
+\begin{frame}{\insertsubsection}
+	\footnotesize
+	\begin{multicols}{2}
+		\textbf{Aluminium}\\
+		Worthington AL80\\
+		\begin{tabularx}{\linewidth}{X r}
+			Pressure:		& 	$207 bar$	\\
+			Volume:			&	$11.1L$		\\
+			Empty weight:	&	$14.5kg$	\\
+			Buoyancy empty:	&	$+1.45kg$	\\
+			Buoyancy at $200bar$:	&	$-0.81kg$
+		\end{tabularx}
+
+		\textbf{Steel}\\
+		Worthington 80\\
+		\begin{tabularx}{\linewidth}{X r}
+			Pressure:		& 	$237 bar$	\\
+			Volume:			&	$11.1L$		\\
+			Empty weight:	&	$12.7kg$	\\
+			Buoyancy empty:	&	$-1.36kg$	\\
+			Buoyancy at $200bar$:	&	$-4.08kg$
+		\end{tabularx}
+	\end{multicols}
+
+	\vspace{1em}
+
+	\begin{multicols}{2}
+		\textbf{Aluminium}\\
+		Catalina S80\\
+		\begin{tabularx}{\linewidth}{X r}
+			Pressure:		& 	$207 bar$	\\
+			Volume:			&	$11.1L$		\\
+			Empty weight:	&	$14.2kg$	\\
+			Buoyancy empty:	&	$+1.85kg$	\\
+			Buoyancy at $200bar$:	&	$-0.72kg$
+		\end{tabularx}
+
+		\textbf{Aluminium}\\
+		Luxfer AL80\\
+		\begin{tabularx}{\linewidth}{X r}
+			Pressure:		& 	$207 bar$	\\
+			Volume:			&	$11.1L$		\\
+			Empty weight:	&	$14.2kg$	\\
+			Buoyancy empty:	&	$+1.54kg$	\\
+			Buoyancy at $200bar$:	&	$-0.63kg$
+		\end{tabularx}
+	\end{multicols}
+\end{frame}
+
+\end{document}
