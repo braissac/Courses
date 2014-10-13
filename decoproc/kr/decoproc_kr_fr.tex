@@ -1,0 +1,812 @@
+\documentclass[english,12pt,a4paper]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{helvet}	% Helvetica font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3.5cm,bmargin=3cm,lmargin=2cm,rmargin=2cm,headheight=3cm,headsep=0.5cm,footskip=1cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{transparent}
+\usepackage{enumitem}
+\usepackage{babel,amsfonts}
+\usepackage{fancybox}
+\usepackage{outlines} % Easy itemize and enumerate
+
+% Title of the question in bold
+\newenvironment{aenumerate}{	\begin{enumerate}\bfseries }{	\end{enumerate} }
+
+% New list, normal font, square before the item, item on the same page
+\newcounter{bcounter}
+\newenvironment{benumerate}%
+{	\normalfont	\begin{list}{$\Box$ \Alph{bcounter}:~}{\usecounter{bcounter} \samepage} }%
+{	\end{list}	}
+
+% Change style of the list
+\renewcommand{\outlinei}{aenumerate}
+\renewcommand{\outlineii}{benumerate}
+\renewcommand{\outlineiii}{style}
+\renewcommand{\outlineiiii}{style}
+
+% Section in header
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+% Pictures and path
+\usepackage{graphicx}
+\newcommand{\tdi}{/Users/chrisbraissant/Documents/_Diving/_TDI-SDI/Graphics/Full_Logo/TDI_Letter}
+\newcommand{\background}{/Users/chrisbraissant/Documents/_Diving/Banstec/Logo/Background_white}
+
+% Background
+\usepackage{draftwatermark}
+\SetWatermarkText{\transparent{0.4}\includegraphics[angle=-45]{\background}}
+
+%---------------------------------------------------------------------
+%										DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+
+	% Header and Footer
+	\renewcommand{\footrulewidth}{1pt}
+	\renewcommand{\headrulewidth}{1pt}
+
+	\lhead{\textbf{TDI Decompression Procedures}\\ Chapitre \thesection: \rightmark }
+	\chead{}
+	\rhead{\includegraphics[height=1cm]{\tdi}}
+
+	\lfoot{Chris Braissant}
+	\cfoot{}
+	\rfoot{\thepage}
+
+%---------------------------------------------------------------------
+%										Plongée à decompression
+%---------------------------------------------------------------------
+	\section{Plongée à decompression}
+
+	\begin{outline}
+		\1 Ne pas effectuer des paliers de décompression nécessaires pourrait engendrer:
+			\2 Accident de décompression
+			\2 Narcose
+			\2 Foramen Ovale Perméable
+			\2 Aucune des réponse ci-dessus
+
+		\1 L'attention principale du plongeur se sittue au niveau de la sécurtié et les autres tâches sont secondaires.
+			\2 Vrai
+			\2 Faux
+
+		\1 La loi de Boyle décrit la rélation entre:
+			\2 La quantité de bulles et la taille des bulles
+			\2 Temps et pression
+			\2 Volume et pression
+			\2 Temps et taille des bulles
+
+		\1 La terme "Maladie des caissons" était utilisé pour décrire:
+			\2 Les accidents de décompression
+			\2 Les "bends"
+			\2 Une embolie gazeuse
+			\2 Les réponses A et B sont correctes
+
+		\1 Paul Bert à découvert deux choses: Une \underline{\hspace{1.5cm}} de la pression ambiante crée des bulles dans les tissus qui peuvent causer des accidents de décompression, et que ces bulles sont composées \underline{\hspace{1.5cm}}.
+			\2 Augmentation, d'azote
+			\2 Diminution, d'azote
+			\2 Augmentation, d'oxygène
+			\2 Diminution, d'oxygène
+
+		\1 En 1908, Haldane fût la première personne à créer et publier des tables de plongées basées sur un modèle de décompression prédit scientifiquement.
+			\2 Vrai
+			\2 Faux
+
+		\1 En 1924, le premier manuel de plongée de \underline{\hspace{1.5cm}} fût publié, incorporant les techniques et procédures développées par George Stillson.
+			\2 l'US Navy
+			\2 la Navy Britannique
+			\2 l'US Air Force
+			\2 l'Air Force Britannique
+
+		\1 Le terme M-Value décrit la niveau de tolérance de \underline{\hspace{1.5cm}} pour un compartiment tissulaire donné:
+			\2 Sous-pression
+			\2 Sur-pression
+			\2 Sous-égalisation
+			\2 Sur-égalisation
+
+		\1 A ce jour, l'algorithme de \underline{\hspace{1.5cm}} est à la base de plusieurs tables et ordinateurs de plongées récréatifs.
+			\2 Workmann
+			\2 Haldane
+			\2 Stillson
+			\2 Bühlmann
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Physique
+%---------------------------------------------------------------------
+\section{Physique}
+	\begin{outline}
+		\1 Quelles est la pression atmospherique au niveau de la mer?
+			\2 0 ATA
+			\2 1 ATA
+			\2 2 ATA
+			\2 3 ATA
+
+		\1 À une profondeur de 20m/66ft, un plongeur subi une pression de \underline{\hspace{1.5cm}} ATA.
+			\2 2
+			\2 2.5
+			\2 3
+			\2 3.5
+
+		\1 La pression ambiante à 41m/135ft est de \underline{\hspace{1.5cm}} ATA.
+			\2 4.2
+			\2 5.1
+			\2 6.3
+			\2 6.8
+
+		\1 À 20m/66ft, l'autonomie d'une bouteille de plongée sera \underline{\hspace{1.5cm}} de celle à la surface.
+			\2 le quart de
+			\2 le tiers de
+			\2 la moité de
+			\2 le double
+			\2 le triple
+
+		\1 Quelle est la pression partielle d'oxygène en réspirant de l'air à 27m/89ft?
+			\2 0.8 ATA
+			\2 0.9 ATA
+			\2 1.0 ATA
+			\2 1.1 ATA
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Physiologie
+%---------------------------------------------------------------------
+	\section{Physiologie}
+
+	\begin{outline}
+		\1  Pendant la plongée, la majorité des molécules entrent et sortent du corps à travers:
+			\2 La peau
+			\2 Le nez
+			\2 Le coeur
+			\2 Les alvéoles
+
+		\1 \underline{\hspace{1.5cm}} contrôle(nt) la quantité de gaz qu'un tissu va abosrber pendant un temps donné.
+			\2 Perfusion
+			\2 Diffusion
+			\2 Perfusion et diffusion
+			\2 Aucune des réponses ci-dessus
+
+		\1 Durant la remontée, il est probable que les tissus lents soient super-saturés et \underline{\hspace{1.5cm}} alors que les tissus rapides seront sous-saturés et \underline{\hspace{1.5cm}}.
+			\2 Diffusent, Perfusent
+			\2 Perfusent, Diffusent
+			\2 Dégazent
+			\2 ,Dégazent
+
+		\1 La présence de micronoyaux gazeux augmente la probabilité de formation de bulles.
+			\2 Vrai
+			\2 Faux
+
+		\1 En faisant des paliers de décompression, le plongeur essaie de contrôler le niveaux de super-saturation, ainsi:
+			\2 Reduire le niveau d'azote dans le corps et les risques associés à la narcose.
+			\2 Reduire le niveau d'oxygène dans les corps et les risques associés à la toxicité de l'oxygène.
+			\2 Reduire le niveau de monoxide de carbone dnas le corps et les risques associés à un empoisonnement au monoxide de carbone.
+			\2 Minimiser la formation de bulles et les risques associés aux accidents de décompression.
+
+		\1 La réaction du corps humain à la formation de bulles dans les sang est similaires à la réaction à une substance étrangère tel une bactérie ou un virus
+			\2 Vrai
+			\2 Faux
+
+		\1 Parce que les tables de plongées, les ordinateurs et les logiciels de décompression sont basés sur des formules mathématiques qui modèlent parfaitement le comportement des gaz dans le corps humain, il est extrêment rare que des bulles se forment quand ses outils sont utilisés correctement.
+			\2 Vrai
+			\2 Faux
+
+		\1 Un excès de \underline{\hspace{1.5cm}} dans le coprs après une plongée peut augmenter la fatique post-plongée et créer des problèmes lors de plongées successives
+			\2 Oxygène
+			\2 Dioxide de carbone
+			\2 Bulles silencieuses
+			\2 Aucune des réponses ci-dessus
+
+		\1 Les premiers symptômes d'un accident de décompression sont les résultats direct de la pression exercée par l'augmentation des bulles de gaz inertes sur les tissus et nerfs environnants.
+			\2 Vrai
+			\2 Faux
+		
+		\1 \underline{\hspace{1.5cm}} et \underline{\hspace{1.5cm}} sont des signes et symptômes d'un accident de décompression.
+			\2 Douleurs musculaires, perte d'ouïe
+			\2 Essoufflement, éruptions cutanées
+			\2 Lèvres et ongles rouges, hallucinations
+			\2 A et B sont correctes
+
+		\1 L'accident de décompression de type I est le plus dangereux et est considéré comme une urgence médicale
+			\2 Vrai
+			\2 Faux
+
+		\1 Si un plongeur ne parvient pas à expirer l'air qui se dilate par une respiration correcte, une rupture pulmonaire peut se produire, conduisant à une situation sérieuse connue sous le nom d'embolie gazeuse.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les signes et symtômes d'une embolie gazeuse comprennent:
+			\2 Perte de sensiblité
+			\2 Crachats sanguinolents
+			\2 Paralysie
+			\2 Toutes les réponses ci-dessus
+
+		\1 Une hydratation correcte doit commencer au minimum	\underline{\hspace{1.5cm}} heures avant la plongeé.
+			\2 2
+			\2 12
+			\2 18
+			\2 24
+
+		\1 Fumer des cigarettes augmente les risques d'obstructions pulmonaires chroniques, de maladie coronarienne, d'accident vasculaires cérébraux, d'anévrisme de l'aorte, de leucémie aiguë myéloïde, de cataracte, de pneumonie, de parodontite, de cancers de la vessie, de l'œsophage, du larynx, du poumon, de la trachée, de la gorge, du col utérin, du rein, de l'estomac et du pancréas, d'accident de décompression et d'embolie gazeuse artérielle.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les plongeurs ne devraient pas rester bonne forme physique en mangeant sainement en en faisait de l'exercice réguliérement.
+			\2 Vrai
+			\2 Faux
+
+		\1 Des preuvent suggèrent que de l'exercice intense immédiatement avant une plongée conduit à une augmentation de la formation de micronoyaux gazeux et n'est donc pas recommandé.
+			\2 Vrai
+			\2 Faux
+
+		\1 De nouvelles données nous amènent à croire que la présence d'un foramen ovale perméable peut être une cause d'accidents de décompression immérités.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si des fluctuations de température ne peuvent pas être évitées, il est généralement préférable d'avoir chaud pendant la partie profonde d'une plongée et d'avoir froid durant la phase de décompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 Divers Alert Network (DAN) recommande un intervalle de surface minimum, avant un vol en avion, de 12 heures pour une simple plongée dans la limite de non-décompression et un minimum de 18 heures pour des plongées successives ou plusieurs jours de plongée. Un intervalle considérablement plus long que 18 heures est recommendé pour des plongées à decompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 La majorité des maladies de décompression demande un traitement dans:
+			\2 Une pharmacie
+			\2 Hôpital psychiatrique
+			\2 Centre de décompression
+			\2 Centre de recompression
+
+		\1 Le meilleur moyen d'éviter la narcose est d'éviter les plongées profondes, ou de choisir un mélange gazeux adapter à la profondeur planifiée.
+			\2 Vrai
+			\2 Faux
+
+		\1 Le corps humain à besoin d'une pression partielle d'oxygène minimale constante de \underline{\hspace{1.5cm}} (minimum \underline{\hspace{1.5cm}} recommandé) afin de fonctionner correctement
+			\2 .14, .16 
+			\2 1.4, 1.6 
+			\2 .16, .18 
+			\2 1.6, 1.8
+
+		\1 La toxité du système nerveux central à l'oxygène est généralement causée par une exposition à long terme à de faible pression partielles.
+			\2 Vrai
+			\2 Faux
+
+		\1 Au repos, l'exposition à une pression partielle d'oxygène maximale de \underline{\hspace{1.5cm}} ATA est génerallement considérée acceptable, et durant les périodes d'activité, cette limite est réduite à \underline{\hspace{1.5cm}} ATA.
+			\2 1.1, 1.3
+			\2 1.3, 1.1
+			\2 1.4, 1.6
+			\2 1.6, 1.4
+
+		\1 La toxicité pulmonaire à l'oxygène est caractérisée par une irritation et inflammation des voies réspiratoires menants aux poumons et des poumons eux-mêmes. Ce type de toxicté est crée par une longue exposition à une pression partielle d'oxygène relativement faible.
+			\2 Vrai
+			\2 Faux
+
+		\1 L'augmentation de la pression partielle de dioxide de carbone est considéré comme un facteur contribuant à l'apparition de:
+			\2 Narcose, toxicité à l'oxygène, et accident de décompression
+			\2 Vertiges, étourdissements, nausées
+			\2 Foramen ovale permeable, mal des montagnes, mal de mer
+			\2 Aucune des réponses ci-dessus
+
+		\1 Les signes et symptômes d'un empoisonnement au monoxide de carbone comprennent:
+			\2 Nausée, fatigue, douleur thoraciques
+			\2 Étourdissement, confusion, irritabilité
+			\2 Maux de tête, perte de conscience, jugement douteux
+			\2 Toutes les réponses ci-dessus
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Théorie de la décompression
+%---------------------------------------------------------------------
+	\section{Théorie de la décompression}
+
+	\begin{outline}
+
+		\1 Les tables de plongées basées sur le modèle de Haldane encouragent le plongeur à remontée aussi proche de la surface que possible, sans excéder la limite critique de super-saturation, et d'y rester jusqu'à ce que suffisamment de gaz inerte se soit échappé pour permettre au plongeur de remonter jusqu'au prochain palier de décompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les modèles de décompression ultérieurs, tels que les tables de Workman, les tables de l'US Navy, et l'algorithme ZHL-16 de Bühlmann, ont suivi les hypothèses générales de Haldane et sont classés comme "Haldanian modifié", ou "néo-Haldanian."
+			\2 Vrai
+			\2 Faux
+
+		\1 Les paliers profonds et les facteurs de gradient sont des modifications populaires appliquées aux modèles de décompression "à double phase".
+			\2 Vrai
+			\2 Faux
+
+		\1 Les modèles "à double phase" ou "à bulles" tentent de prédire le comportement des gaz en solution et à l'état libre (bulles).
+			\2 Vrai
+			\2 Faux
+
+		\1 Les modèles "à double phase" ou "à bulles" tentent de contrôler \underline{\hspace{1.5cm}} des bulles dans le tissus du plongeur.
+			\2 La forme
+			\2 La couleur
+			\2 La taille
+			\2 L'apparence
+
+		\1 L'un des moyens par lequel un modèle "a bulles" tente de contrôler la quantité de bulles autorisées à se développer consiste à limiter:
+			\2 Le rayon critique
+			\2 Le nombre critique
+			\2 Le rayon postérieur
+			\2 Le nombre postérieur
+
+		\1 VPM est un modèle "à double phase" qui suggéste que des bulles de différents(es) \underline{\hspace{1.5cm}} ont une perméabilité variable.
+			\2 Gaz
+			\2 Formes
+			\2 Tailles
+			\2 Textures
+
+		\1 RGBM diffère de VPM de quelle manière?
+			\2 VPM-B base l'ensemble de la remontée sur un modèle "à bulles", et RGBM utilise un modèle "à bulles" pour contrôler les premiers paliers profonds, puis repose sur un modèle plus traditionnel de gaz dissous pour calculer les paliers peu profonds.
+			\2 RGBM reduit diminue le gradient permis par trois facteurs.
+			\2 RGBM tient compte de la "fenêtre oxygène" dans son calcul.
+			\2 Toutes les réponses ci-dessus.
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Équipement
+%---------------------------------------------------------------------
+	\section{Équipement}
+
+	\begin{outline}
+		\1 Les plongeurs utilisant des systèmes à circuits ouverts doivent emporter suffisament de gaz pour: terminer en toute sécurtité la partie profonde de la plongée; remonter à la surface et effectuer tous les paliers de décompression; et assister un membre de l'équipe en cas de perte de gaz catastrophique.
+			\2 Vrai
+			\2 Faux
+
+		\1 L'utilisation d'un recycleur n'impose pas au plongeur de transporter et conserver une réserve de gaz en circuit ouvert suffisante qui peut être utilisée en cas de défaillance d'un recycleur.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les bouteilles de plongée sont disponnibles dans une variété de tailles, de matériaux, et des pressions d'usage. Les bouteilles sélectionnées dépendront des contraintes \underline{\hspace{1.5cm}} et des nécessités \underline{\hspace{1.5cm}}.
+			\2 Economiques, Environnementales
+			\2 Environnementales, Gazeuses
+			\2 Gazeuses, Mathématiques
+			\2 Mathematiques, de la plongée
+
+		\1 Les plongeurs à décompression préférent les robinetteries à étrier car le joint torique est encapsulé. De plus, le joint torique est plus grand, plus résistant et plus fiable.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les robinetteries \underline{\hspace{1.5cm}} ont deux sorties, permettant aux plongeurs de connecter un détendeur redondant à une mono-bouteille.
+			\2 A et Z
+			\2 C et X
+			\2 H et Y
+			\2 K et Q 
+
+		\1 Les ponts isolateurs sont des vannes spéciales reliant deux bouteilles, permettant au plongeur d'avoir accès à la totalité du gaz en ne respirant que sur un seul détendeur.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les plongeurs à décompression doivent choisir leurs détendeurs en fonction de leur:
+			\2 Fiabilité, performance et configurabilité
+			\2 Prix, garantie et couleur
+			\2 Poids, durabilité et longeur des flexibles
+			\2 Aucune des réponses ci-dessus
+
+		\1 Chaque bouteille et détendeur utilisé par un plongeur doit être accompagné d'un manométre, même si plusieurs bouteilles sont connectées par un pont isolateur.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les caractéristiques principales à considérer lors de la sélection d'un système de flottabilité sont:
+			\2 Simplicité, volume, et qualité
+			\2 Forme, redondance, et mouvements gazeux
+			\2 Couleur, prix, et marque
+			\2 Les réponses A et B sont correctes
+
+		\1 Une combinaison adéquate est essentielle pour le comfort et la protection contre le mileu environnant.
+			\2 Vrai
+			\2 Faux
+
+		\1 La caractéristique principale lors de la séclection d'un masque est:
+			\2 Couleur
+			\2 Prix
+			\2 Forme adaptée
+			\2 Attache pour tuba
+
+		\1 Tous les types de palmes sont propices aux techniques de propulsion utilisés par les plongeurs techniques.
+			\2 Vrai
+			\2 Faux
+
+		\1 Transportant un couteau de secours est fortement recommandé
+			\2 Vrai
+			\2 Faux
+
+		\1 Si des lampes doivent être utilisées pour une plongée à décompression:
+			\2 Un minimum de cinq lampes doivent être transportées
+			\2 Une doit être designée en tant que principale, et une deuxième doit être transport en tant que résérve
+			\2 Uniquement le chef de palanquée à besoin d'une réserve
+			\2 Aucune des réponses ci-dessous
+
+		\1 Les ardoises et calepins offrent aux plongeurs la possibilité de:
+			\2 Collecter des informations et communiquer avec les membres de l'équipe
+			\2 Recalculer la pression de retour sous l'eau
+			\2 Jouer à Tic-Tac-Toe pendant les paliers au lieu d'observer les membres de l'équipe
+			\2 Dessiner des caricatures de l'instructeur
+
+		\1 Un plongeur à décompression doit transporter au minimum un profondimètre et une montre en plus d'un ordinateur de plongée.
+			\2 Vrai
+			\2 Faux
+
+		\1 Un minimum de trois dévidoirs doivent être transporter par chaque membre de l'équipe lors d'une plongée à décompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 Un plongeur à décompression doit transporter un minimum de \underline{\hspace{1.5cm}} parachute de palier.
+			\2 Un
+			\2 Deux
+			\2 Trois
+			\2 Quatre
+
+		\1 Uniquement les plongeurs Nitrox et Trimix devraient savoir utiliser et avoir accès à un analyseur d'oxygène.
+			\2 Vrai
+			\2 Faux
+
+		\1 Acheter des flexibles de la bonne longeur aidera dans	le processus \underline{\hspace{1.5cm}}.
+			\2 De dégazage
+			\2 De pré-plongée
+			\2 D'hydrodynamisme
+			\2 Aucune des réponses ci-dessus
+
+		\1 Un dimensionnement correct de l'équipement favorise le confort et l'efficacité du plongeur.
+			\2 Vrai
+			\2 Faux
+
+		\1 Quand un ensemble de plongée est assemblé, le plongeur devrait essayer de monter chaque élement accessoire dans le \underline{\hspace{1.5cm}} du plongeur.
+			\2 Triangle de secours
+			\2 Sillage
+			\2 Champ de vision
+			\2 Aucune des réponses ci-dessus
+
+		\1 \underline{\hspace{1.5cm}} doit/doivent être clairement marqué(s) sur le col de la bouteille et orienté de manière à être visible par le plongeur durant la plongée.
+			\2 Le pourcentage d'oxygène et la profondeur maximum d'utilisation
+			\2 Le nom du plongeur
+			\2 Le nom de l'opérateur de la station de gonflage
+			\2 Toutes les réponses ci-dessus
+
+		\1 Les protections de détendeurs élimine le besoin de contrôler visuellement une bouteille lors d'un changement de gaz.
+			\2 Vrai
+			\2 Faux
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Techniques et procédures
+%---------------------------------------------------------------------
+	\section{Techniques et procédures}
+	\begin{outline}
+		\1 Un plongeur à décompression doit être capable de maintenir une position constante dans la colonne d'eau en tout temps avec peu, ou pas, de déviation.
+			\2 Vrai
+			\2 Faux
+
+		\1 Une position correcte demande au plongeur d'ajuster sa posture en fonction de:
+			\2 Température de l'eau
+			\2 Visibilité
+			\2 Direction et vitesse de déplacement
+			\2 Les réponses A et B sont correctes
+
+		\1 Uniquement le "Flutter kick" (Battement des jambes) doit être maitrisé afin d'atteindre une efficacité optimale sans perturber les sédiments.
+			\2 Vrai
+			\2 Faux
+
+		\1 Il est permis de s'écarter de la respiration idéale quand c'est:
+			\2 Par accident
+			\2 Choisi
+			\2 Il n'est jamais acceptable de s'écarter de la respiration idéale
+			\2 Les réponses A et B sont correctes
+
+		\1 L'attention personnelle, globale et situationnelle sont d'égale importance, et l'attention véritable ne peut pas être achevée si un élément fait défaut.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les plongeurs doivent garder leurs communications \underline{\hspace{1.5cm}} afin d'éviter toute mauvaise interprétation
+			\2 Optimistes et directes
+			\2 Honnête et confuses
+			\2 Claires et concises
+			\2 In est inutile de communiquer sous l'eau
+
+		\1 Chaque fois que possible, les plongeurs doivent se positionner dans les angles morts des membres de l'équipe.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les trois signaux lumineux de base sont:
+			\2 OK, j'ai besoin de l'attention, et j'ai besoin d'attention immédiatement.
+			\2 OK, problème, terminer la plongée.
+			\2 OK, problème, panne d'air.
+			\2 OK, problème, remonter.
+
+		\1 L'attention lumineuse fait référence à l'attention d'un plongeur à la position et les actions de sa lampe et des lampes des membres de son équipe.
+			\2 Vrai
+			\2 Faux
+
+		\1 \underline{\hspace{1.5cm}} devraient éliminer le besoin de communications écrites.
+			\2 Systèmes de communication électroniques
+			\2 Calepins étanches
+			\2 Planification et briefing complet avant une plongée
+			\2 Comptes rendus d'après plongée
+
+		\1 Des lignes de descentes et de remontée fixes sont idéales pour les sites de plongées avec des courants extrêmements forts.
+			\2 Vrai
+			\2 Faux
+
+		\1 En effectuant une descente ou remontée "dans le bleu", utiliser un objet stationnaire en tant que référence visuelle fixe permet d'éviter la désorientation et permet d'approximer la vitesse de descente ou de remontée.
+			\2 Vrai
+			\2 Faux
+
+		\1 Déployer un parachute de palier est:
+			\2 Facile et ne requiert que peu de pratique afin d'être maitrisé.
+			\2 Averti le bateau de plongée, ou d'autre support de surface, de votre position.
+			\2 Fournit à l'équipe une ligne de remontée qui peut être utilisée en tant que référence visuelle.
+			\2 Toutes les réponses ci-dessus.
+
+		\1 Les facteurs qui dicteront la vitesse de descente et de remontée peuvent inclure:
+			\2 Les conditions du site et la profondeur de la plongée
+			\2 La narcose
+			\2 Le type de descente et de remontée
+			\2  Toutes les réponses ci-dessus
+
+		\1 Le temps de plongée actuel (run time) est un outil important car il permet aux plongeurs de suivre leurs plans
+			\2 Vrai
+			\2 Faux
+
+		\1 L'acronyme MODS de TDI décrit la procédure pour:
+			\2 Briefing pré-plongée
+			\2 Debriefing post-plongée
+			\2 Effectuer un changement de gaz
+			\2 Deployer un parachute de palier
+
+		\1 Les bouteilles de décompression ne doivent être déposées que si les plongeurs sont sûres qu'ils peuvent retourner et récupérer leurs bouteilles en toute sécurité avant de faire surface
+			\2 Vrai
+			\2 Faux
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%										Planification
+%---------------------------------------------------------------------
+	\section{Planification}
+
+	\begin{outline}
+		\1 \underline{\hspace{1.5cm}} est la première étape du processus de planification.
+			\2 Collecte de données
+			\2 Réalisation du profil de plongée
+			\2 Coordination de l'équipe
+			\2 Sélection des mélanges gazeux 
+
+		\1 Les objectids de la plongée doivent être accomplis.
+			\2 Vrai
+			\2 Faux
+
+		\1 \underline{\hspace{1.5cm}} de la plongée va/vont dicter l'ordre dans lequel les phases planifiées de la plongée vont être exécutées
+			\2 Les objectifs
+			\2 Le profil
+			\2 La durée
+			\2 Les facteurs limitants
+
+		\1 La formule de profondeur maximale d'utilisation (MOD) dérivée de la formule de Daltonn est:
+			\2 $MOD=FO2 \div PO2$
+			\2 $MOD=PO2 \div FO2$
+			\2 $MOD=FO2 \times PO2$
+			\2 $MOD=PO2 \times FO2$
+
+		\1 Au cours des dernières années, les logiciels informatiques sont devenus la méthode privilégiée pour la planification des plongées techniques.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les principales planification d'urgence tiennent compte de:
+			\2 Un temps de plongée plus court (plongée abortée)
+			\2 Un temps de plongée plus long (retard inattendu)
+			\2 Une profondeur planifiée plus profonde (circonstances imprévues)
+			\2 Toutes les réponses ci-dessus
+
+		\1 L'élévation d'un site de plongée au dessus du niveau de la mer n'a pas besoin d'être pris en compte dans la planification.
+			\2 Vrai
+			\2 Faux
+
+		\1 Un plongeur consomme 30bar / 440psi d'un bi-bouteille aluminium de 10L / 80cf, pendant une plongée de 15 minutes à une profondeur de 10m / 33ft. Les bouteilles ont une pression d'utilisation de 207bar / 3000psi. Quelle est la consommation de surface (SAC) du plongeur?
+			\2 18L/min or .70cf/min
+			\2 20L/min or .78cf/min
+			\2 22L/min or .86cf/min
+			\2 Aucune des réponses ci-dessus
+
+		\1 La plupart des logiciels de plannification calculent automatiquement le volume de gaz consommé dès que les données du plan ont été entrées.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les planifications d'urgence créées à l'aide des questions "Et si?" ("What if?") sont un bon indicateur de la quantitée de réserve de gaz nécessaire pour la plongée. 
+			\2 Vrai
+			\2 Faux
+
+		\1 La pression minimale à laquelle un plongeur doit amorcée sa remontée peut être déterminée durant la plongée et n'est pas une étape nécessaire dans la planification pré-plongée.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si les plongeurs utilisent des bouteilles de différents volumes, tous les membres de l'équipe peuvent utiliser la même pression de remontée tant que celle-ci a été calculée en utilisant la bouteille ayant le plus grand volume.
+			\2 Vrai
+			\2 Faux
+
+		\1 Afin d'éviter une toxicité pulmoniare ou neurologique à l'oxygène, l'exposition neurologique (CNS) et les unités tolérées (OTUs) doivent être calculés:
+			\2 Une fois par jour
+			\2 Une fois par semaine
+			\2 Une fois par mois
+			\2 Avant chaque plongée
+
+		\1 Avant la plongée, l'équipe doit déterminer le type de matériel à utiliser, la quantité à emporter, et comment il sera distribué.
+			\2 Vrai
+			\2 Faux
+
+		\1 Une équipe de plongeur à décompression est généralement composée de quatres membres.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les activités d'une équipe de plongeurs sont limitées par le plongeur \underline{\hspace{1.5cm}}.
+			\2 Le moins expérimenté
+			\2 Le plus expérimenté
+			\2 Le plus rapide
+			\2 Le plus lent
+
+		\1 Établir l'ordre de l'équipe et la délégation des responsabilités avant la plongée permet d'éliminer toute confusion lors de la plongée.
+			\2 Vrai
+			\2 Faux
+
+		\1 La plupart des sites de plongée sont inexplorés. Par conséquent, il n'est pas nécessaire de déterminer un trajet à suivre lors de la plongée.
+			\2 Vrai
+			\2 Faux
+
+		\1 Lors de la planification de plongée dans des endroits réculés, planifiez les plongées:
+			\2 Intelligemment et rapidement
+			\2 Rapidement et prudemment
+			\2 Prudemment et de manière conservative
+			\2 Rapidement et imprudemment
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%								Résolution de problèmes
+%---------------------------------------------------------------------
+	\section{Résolution de problèmes}
+	\begin{outline}
+		\1 Le niveau d'attention d'un plongeur joue un rôle essentiel dans sa capacité à éviter les problèmes potentiels.
+			\2 Vrai
+			\2 Faux
+
+		\1 Le moyen le plus efficace de gérer le stress est par:
+			\2 Effort supplémentaire et contrôle physique
+			\2 Contrôle physique et changement de gaz
+			\2 Cahngement de gaz et relaxation
+			\2 Relaxation et contrôle réspiratoire
+
+		\1 Si une panne de lampe devait avoir lieu en cours de plongée:
+			\2 Ne pas tenir compte de l'équipe et se concentrer sur le déploiement d'une lampe de secours
+			\2 Rester avec l'équipe et ne pas déployer de lampe de secours
+			\2 Ne rien faire et continuer la plongée
+			\1 Aucune des réponses ci-dessus
+
+		\1 Si un changement important de la visibilité due à des particules supplémentaire dans l'eau se produit, et que l'équipe ne peut par retourner en toute sécurité au point de remontée prédéterminé, la plongée doit être abortée et l'équipe doit remonter, sans tenir comptes des paliers de décompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si un emmêlement se produit:
+			\2 S'arrêter, signaler à l'équipe, essayer de se libérer, attendre l'aide d'un binôme
+			\2 Lutter et se tourner afin de se libérer
+			\2 Gonfler son système de flottabilité, retenir sa réspiration et nager vers la surface
+			\2 Toutes les réponses ci-dessus
+
+		\1 Si une séparation de l'équipe devait se produire au cours d'une plongée à décompression, et qu'il ne soit pas possible de se retrouver avant la remontée, chaque membre de l'équipe doit remonter de manière indépendante et compléter tous les paliers de décompression nécessaires.
+			\2 Vrai
+			\2 Faux
+
+		\1 Les plongeurs à décompression doivent être équipés d'un dispositif de flottaison de secours en cas d'urgence. 
+			\2 Vrai
+			\2 Faux
+
+		\1 La plupart des hémorragies gazeuses peuvent être arrêtées en fermant une robinetterie.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si la plongée a été correctement planifiée, \underline{\hspace{1.5cm}} transportera suffisament de gaz pour deux plongeurs afin de rejoindre la surface en effectuant tous les paliers de décompression nécessaire.
+			\2 l'équipe
+			\2 Chaque plongeur
+			\2 Une réserve de gaz supplémentaire n'est pas nécessaire
+			\2 Aucune des réponses ci-dessus
+
+		\1 Si une perte d'un ou plusieurs gaz de décompression devait se produire, le plongeur peut:
+			\2 Passer sur un gaz de réservé et utiliser une planification de secours
+			\2 Le plongeur peut attendre d'un autre membre de l'équipe ai termniné ses paliers et utiliser le gaz restant
+			\2 Respirer en échange d'embout avec un autre membre de l'équipe (si les conditions le permettent)
+
+		\1 Si des circonstances imprévues créent un dépassement de profondeur, ou de temps de plongée, l'équipe doit utiliser une planification de secours et effectuer les paliers de décompression selon.
+			\2 Vrai
+			\2 Faux
+
+		\1 La première étape de la gestion d'un plongeur inconscient ou intoxiqué est de:
+			\2 Maintenir le détendeur dans la bouche du plongeur et de maintenir les voies respiratoires ouvertes pendant la remontée à la surface tout en effecutant les paliers de décompression
+			\2 Remonter le plongeur inconscient et appeler à l'aide
+			\2 Contrôler le rythme respiratoire et le pouls
+			\2 Procéder à une évaluation des risques avant d'aider un plongeur en détresse
+
+		\1 Si un dévidoire s'emmêle lors du déploiement d'un parachute de palier, tenter de déméler la ligne avant d'atteindre la surface.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si, en arrivant à la surface, le bateau de plongée est manquant, nager immédiatement vers la rive.
+			\2 Vrai
+			\2 Faux
+
+		\1 Si un plongeur omet le palier de 9m / 30ft et peut redescendre en moins d'une minute, le plongeur doit:
+			\2 Retourner à la profondeur du palier, augmenter le temps d'arrêt d'une minute. Compléter les paliers selon la planification initiale.
+			\2 Retourner à la profondeur du palier. Multiplier les temps de paliers de 9m en moins profonds par 1.5
+			\2 Redescendre au premier palier de décompression, suivre la planification initiale jusqu'au palier de 9m, et multiplier les temps de paliers de 9m en moins profonds par 1.5.
+			\2 Aucune des réponses ci-dessus
+
+		\1 Le Diver Alert Network (DAN) recommande d'effectuer un examen neurologique dès qu'un plongeur est suspecté de:
+			\2 Toxicité à l'oxygène
+			\2 Accident de décompression
+			\2 Narcose
+			\2 Intoxication au monoxide de carbone
+
+		\1 Le traitement de base est le même pour toutes les maladies de décompression.
+			\2 Vrai
+			\2 Faux
+
+		\1 La recompression dans l'eau est une procédure relativement simple qui présente peu de danger pour les sauveteurs et la victime.
+			\2 Vrai
+			\2 Faux
+	\end{outline}
+	\pagebreak
+
+%---------------------------------------------------------------------
+%								Préparation de la plongée
+%---------------------------------------------------------------------
+	\section{Préparation de la plongée}
+	\begin{outline}
+		\1 La création d'une liste permet de réduire le risque d'oublier de l'équipement important.
+			\2 Vrai
+			\2 Faux
+
+		\1 Ne pas commencer une plongé si les conditions environnementales semblent dangereuses.
+			\2 Vrai
+			\2 Faux
+
+		\1 Une planification pré-plongée doit comprendre:
+			\2 Objectifs et profil de la plongée
+			\2 Gaz utilisés et trajet
+			\2 Techniques de communication et résolution de problèmes
+			\2 Toutes les réponses ci-dessus
+
+		\1 Avant d'entrer dans l'eau, tester \underline{\hspace{1.5cm}} et s'assurer de la disponnibilité durant la plongée.
+			\2 Les lampes de plongée uniquement
+			\2 Le détendeur principal uniquement
+			\2 Toutes les pièces de l'équipement
+			\2 Toutes les réponses ci-dessus
+
+		\1 STOP est un acronyme qui guide le plongeur à travers les contrôles de sécurité pré-plongée.
+			\2 Vrai
+			\2 Faux
+
+		\1 L'équipe doit effectuer un(e) \underline{\hspace{1.5cm}} approfondi après chaque plongée de décompression.
+			\2 Briefing
+			\2 Débriefing
+			\2 Séance de planification
+			\2 Aucune des réponses ci-dessus
+
+		\1 Idéalement, le débriefing aura lieu avant de sortir de l'eau.
+			\2 Vrai
+			\2 Faux
+
+		\1 Un compte rendu complet comprendra les éléments suivants:
+			\2 Précision du briefing
+			\2 Efficacité de la préparation
+			\2 Exercices pré-plongée (START)
+			\2 Toutes les réponses ci-dessus
+	\end{outline}
+	\pagebreak
+
+\end{document} 
