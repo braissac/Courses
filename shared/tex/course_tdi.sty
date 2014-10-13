@@ -3,7 +3,7 @@
 %---------------------------------------------------------------------
 %										PACKAGES
 %---------------------------------------------------------------------
-\usepackage{helvet}	% Helvetica font
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -11,13 +11,14 @@
 \geometry{verbose,%
 				tmargin=3.5cm,%
 				bmargin=3cm,%
-				lmargin=2cm,%
-				rmargin=2cm,%
+				lmargin=2.5cm,%
+				rmargin=3cm,%
 				headheight=3cm,%
 				headsep=1cm,%
 				footskip=1cm}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage{enumitem}
 \usepackage{textcomp} % Use to draw a square with \Box
 \usepackage{graphicx} 
 \usepackage{babel,amsfonts}
@@ -36,13 +37,13 @@
 %										Outline
 %--------------------------------------------------------------------- 
 % Title of the question in bold
-\newenvironment{aenumerate}{\begin{enumerate}\bfseries}{\end{enumerate} }
+\newenvironment{aenumerate}{\begin{enumerate}\bfseries}{\end{enumerate}}
 
 % New list, normal font, square before the item, item on the same page
 \newcounter{bcounter}
 \newenvironment{benumerate}%
-{	\normalfont	\begin{list}{$\Box$ \Alph{bcounter}:~}{\usecounter{bcounter} \samepage} }%
-{	\end{list}	}
+{\normalfont\begin{list}{$\Box$ \Alph{bcounter}:~}{\usecounter{bcounter}\samepage}}%
+{\end{list}	}
 
 % Change style of the list
 \renewcommand{\outlinei}{aenumerate}

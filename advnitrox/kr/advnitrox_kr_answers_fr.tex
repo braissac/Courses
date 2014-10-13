@@ -8,11 +8,19 @@
 \author{TECHNICAL DIVING INTERNATIONAL}
 \website{www.tdisdi.com}
 
+
+%---------------------------------------------------------------------
+%										FORMAT
+%---------------------------------------------------------------------
+% Change le format des listes
+\renewenvironment{benumerate}%
+{\normalfont\begin{list}{-}{\samepage}}%
+{\end{list}	}
+
 %---------------------------------------------------------------------
 %										DOCUMENT
 %---------------------------------------------------------------------
 \begin{document}
-
 	\input{../../shared/tex/title_tdi}
 
 %---------------------------------------------------------------------
@@ -21,36 +29,37 @@
 	\setcounter{section}{1}
 	\section{Principes fondamentaux de la plongée technique}
 
-	\begin{outline}
+	\begin{outline}[enumerate]
 		\1 Un plongeur élite aura son attention centrée sur?
-			\2[-] Les performances. Tout se qui se passe durant la plongée est controlé par le plongeur
+			\2 Les performances.
+			\2 Tout se qui se passe durant la plongée doit être sous le contrôle du plongeur
 	
 		\1 Un plongeur élite se concentre sur quelles compétances?
-			\2[-] Respiration, flottabilité, palmage, position
+			\2 Respiration, flottabilité, palmage, position
 	
 		\1 Quelle est l'influence des poumons sur la flottabilité?
-			\2[-] Expirer diminue la flottabilité et permet de couler ou de ralentir une remontée
-			\2[-] Inspirer augment la flottabilité et permet de flotter ou d'arréter une descente
+			\2 Expirer diminue la flottabilité et permet de couler ou de ralentir une remontée
+			\2 Inspirer augment la flottabilité et permet de flotter ou d'arréter une descente
 	
-		\1 Pour une respiration idéale, le plongeur devrait remplir ses poumons par le \underline{	\	hspace{1.5cm}} et les vider par le \underline{\hspace{1.5cm}}.
-			\2[-] Bas (ventre) / Haut (torse)
+		\1 Pour une respiration idéale, le plongeur devrait remplir ses poumons par le \underline{	\hspace{1.5cm}} et les vider par le \underline{\hspace{1.5cm}}.
+			\2 Bas (ventre) / Haut (torse)
 	
 		\1 Pour quelles raison devrait-on s'écarter d'un rythme respiratoire idéal?
-			\2[-] Afin de maintenir une flottabilité très précise
-			\2[-] Pour se déplacer dans la colonne d'eau dans utiliser son système de flottabilité
+			\2 Afin de maintenir une flottabilité très précise
+			\2 Pour se déplacer dans la colonne d'eau dans utiliser son système de flottabilité
 	
 		\1 En plongée, quand est-ce que les mains sont utilisées pour se déplacer ou se tourner
-			\2[-] Jamais
-			\2[-] Exception: \textit{Pull and glide} en plongée spéléo ou sur épave.
+			\2 Jamais
+			\2 Exception: \textit{Pull and glide} en plongée spéléo ou sur épave.
 	
 		\1 Quels sont les avantages à plonger en position alignée?
-			\2[-] Effort et résistance réduits, plus efficace, meilleure consommation d'air, moins 	d'effet sur les fonds marins, meilleur contrôle.
+			\2 Effort et résistance réduits, plus efficace, meilleure consommation d'air, moins 	d'effet sur les fonds marins, meilleur contrôle.
 	
 		\1 Dans quelle position doit être un plongeur dans la partie active de la plongée près 	d'un 	fond marin délicat?
-			\2[-] Position alignée
+			\2 Position alignée
 	
 		\1 Y a-t-il un moment en plongée où les compétances de base peuvent être ignorées?
-			\2[-] Non, par contre, le plongeur peut chosir de se relaxer tant qu'il n'y à pas 	d'incidence sur la plongée (ex: décompression dans le bleu)
+			\2 Non, par contre, le plongeur peut chosir de se relaxer tant qu'il n'y à pas 	d'incidence sur la plongée (ex: décompression dans le bleu)
 	\end{outline}
 	\pagebreak
 
@@ -60,23 +69,22 @@
 	\section{Physique et Lois des gas}
 	\begin{outline}
 		\1 L'oxygène est un gaz \underline{\hspace{1.5cm}} et \underline{\hspace{1.5cm}}.
+			\2 Inodore et incolore
 
 		\1 Est-ce que l'oxygène est nécessaire pour la vie?
+			\2 Oui!
 
 		\1 Citer deux calculs  que vous pouver faire grâce à la loi de Bolye.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Consommation d'air
+			\2 Changement de volume en profondeur
 
 		\1 Citer trois calculs que vous pouver faire grâce à la loi de Dalton
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Profondeur maximale d'utilisation (MOD)
+			\2 Mélange idéal
+			\2 Pression partielle
 
 		\1 Pourquoi la Profondeur Équivalente à l'Air (EAD) permet au plongeur de plonger plus longtemps?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 La profondeur équivalente à l'air permet au plongeur de calculer le taux d'azote emmagasiné lors d'une plongée au nitrox comparé à une plongée à l'air, et détermine une profondeur fournissant le même apport d'azote.
 	\end{outline}
 	\pagebreak
 
@@ -86,70 +94,63 @@
 	\section{Physiologie}
 	\begin{outline}
 		\1 L'hypoxie est:
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			
+			\2 Une diminution d'oxygène au niveau cellulaire
+
 		\1 N'importe quel mélange avec moins de \underline{\hspace{1.5cm}} pourcent d'oxygène est considéré comme hypoxique.
+			\2 21\%
 
 		\1 Pourquoi le risque d'hypoxie est plus élevé avec un recylceur?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Le recycleur permet au plongeur de re-respirer le gaz expiré en captant le dioxide de carbone. Cependant, le corps humain métabolise un certain niveau d'oxygène, et si ce volume n'est pas compensé, la pression partielle peut descendre en dessous du seuil admissible.
 
 		\1 Un mélange gazeux ne contenant pas du tout d'oxygène est appelé:
-			\2[] \hspace{-2em}\hrulefill
+			\2 Anoxique
 
 		\1 Si un plongeur est exposé à plus de \underline{\hspace{1.5cm}} ATA de pression partielle d'oxygène, ce exposition doit être suivie.
+			\2 0.5 ATA
 
 		\1 Les signes et symptômes d'une toxité à l'oxygène du système nerveux central sont caractérisées par:
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 CONvulsion
+			\2 Vision - troubles visuels
+			\2 Ecoute - oreilles qui sifflent
+			\2 Nausée
+			\2 Tremblements
+			\2 Irritabilité
+			\2 Vertiges
 
 		\1 Quel est le pourcentage d'exposition à l'oxygène pour une plongée avec une exposition à une pression pertielle de 1.2 ATA pendant 55 minutes?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Une exposition à 1.2ATA est tolérée pendant 210 minutes
+			\2 $55 / 210=26.19\%$
 
 		\1 Quels sont les signes et symptômes de la toxicité pulmonaire à l'oxygène?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Douleurs à l'inhalation, toux sèche, sensation de brûlure de la gorge et des poumons, volume pulmonaire réduit
 
-		\1 Combien d'unités do'xygène (OTUs) un plongeur aura-t-il après une plongée de 55 minutes à une pression partielle d'oxygène de 1.2 ATA?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+		\1 Combien d'unités do'xygène (OTUs) un plongeur aura-t-il après une\\plongée de 55 minutes à une pression partielle d'oxygène de 1.2 ATA?
+			\2 Une exposition à 1.2 ATA donne 1.32 OTUs/min
+			\2 $55\times1.32=72.6OTU$
 
 		\1 Quelle quantité d'OTUs est autorisée pour cinq jours de plongée?
-			\2[] \hspace{-2em}\hrulefill
+			\2 Une quantité de 2300 OTUs sur 5 jours, soit 460 OTUs par jour
 
 		\1 Citer trois choses qu'un plongeur peut faire pour améliorer ses remontées en plongée sportive.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Toujours être en flottabilité neutre
+			\2 Utilisé la respiration (volume pulmonaire) pour remonter
+			\2 Effectuer des paliers de sécurité
 
 		\1 Quels sont les signes et symptômes de la narcose?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Perte de coordination, perte d'attention, anxiété, vertiges, euphorie,...
 
 		\1 Décrire comment minimiser le dioxide de carbone pendant la plongée.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Utiliser du matériel de bonne qualité et bien entretenu
+			\2 Respirer correctement
+			\2[-]	Diminuer l'effort lors de la plongée
 
-		\1 Quelle est la source principale de monoxide de carbone dans un mélange gazeux?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+		\1 Quelle est la principale source de monoxide de carbone dans un mélange gazeux?
+			\2 Problèmes lors du gonflage des bouteilles (gaz d'échappement ou compresseur mal entretenu)
 
 		\1 Décrire comment le système immunitaire peut compliquer un accident de plongée.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Le système immunitaire réagit aux bulles gazeuses comme à un virus ou une bactérie
+			\2[-]	Libération de globules blancs qui emprisonnent la bulle
+			\2[-]	La bulle ne peut plus se diffuser dans le système respiratoire
 	\end{outline}
 	\pagebreak
 
@@ -159,29 +160,20 @@
 	\section{Formules}
 	\begin{outline}
 	\1 Quelle est la différence de pression à 30m / 99 ft comparé à la surface?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Surface: 1ATA, Profondeur: 4ATA, donc 4 fois plus grande
 
 	\1 Quel est le meilleur mélange pour une plongée à 32m / 107 ft?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $FO_2 = 1.4/4.2 = 33\%$
 
 	\1 Quelle est la profondeur maximale d'utilisation pour un EAN27 pour la partie profonde et pour la décompression?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $P = 1.6/0.27=5.9$ soit $49m$
+			\2 $P = 1.4/0.27=5.1$ soit $41m$
 
 	\1 Quelle est la pression partielle d'oxygène à 30m / 100 ft pour un EAN30?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $PO_2 = 0.3 \times 4 =1.2ATA$
 
 	\1 Quelle est la profondeur équivalente à l'air (EAD) pour un EAN36 à 25m / 85ft?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $EAD= \{ (25+10)\times \frac{1-0.36}{0.79} \}-10 = 18m$
 	\end{outline}
 	\pagebreak
 
@@ -191,16 +183,15 @@
 	\section{Equipement}
 	\begin{outline}
 		\1 L'équipement utilisé avec un pourcentage d'oxygène supérieur à \underline{\hspace{1.5cm}} pourcent doit être nettoyé pour l'utilisation avec de l'oxygène.
+			\2 40\%
 
 		\1 Citer 3 étapes dans le nettoyage pour l'utilisation avec de l'oxygène.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Nettoyage de la corrosion
+			\2 Nettoyage des hydrocarbones
+			\2 Test
 
 		\1 Que faire si une pièce d'équipement est contaminée ou utilisée avec un gaz non compatible?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Elle doit être re-nettoyée
 	\end{outline}
 	\pagebreak
 
@@ -210,23 +201,24 @@
 	\section{Utilisation de Nitrox}
 	\begin{outline}
 		\1 Citer trois outils permettant de planifier une plongée.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Tables de plongée
+			\2 Ordinateurs de plongée
+			\2 Logiciel de planification
 
 		\1 Citer trois limites de l'utilisation d'un ordinateur de plongée.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Ne gère pas la consommation d'air
+			\2 Ne peut pas effectuer la plongée pour le plongeur
+			\2 Toutes les plongées sont faisables, pas de limitation
 
 		\1 Citer trois avantages à utliser un ordinateur de plongée.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Exposition en temps réel
+			\2 Augmentaion de la limite de non-décompression (multi-niveaux)
+			\2 Diminue les erreurs de calculation
+			\2 Simplicité d'utilisation
 
 		\1 Quelle est la meilleure redondace à un ordinateur de plongée?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Un autre ordinateur de plongée
+			\2 Montre et profondimètre
 	\end{outline}
 	\pagebreak
 
@@ -236,44 +228,39 @@
 	\section{Planification}
 	\begin{outline}
 		\1 Quels sont les bénéfices à planifier manuellement une plongée?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Permet de mieux comprendre le fonctionnement des tables
+			\2 Permet d'éviter des erreurs de configuration d'un logiciel
+			\2 Permet de retenir sa planification plus facilement
 
 		\1 Citer cinq aspects important d'une planification.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Gaz - Volume et compatibilité avec l'équipe
+			\2 Décompression - Paliers et plan d'urgence
+			\2 Oxygène - Exposition à l'oxygène, analyse des gaz
+			\2 Narcose - Profondeur
+			\2 Exposition thermique - Température
+			\2 Logistique !!!
 
 		\1 Pourquoi est-il important de calculer la consommation de gaz?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Permet d'éviter une panne d'air
+			\2 Permet de planifier une mission réaliste
 
 		\1 Un plongeur utilise 12bar de gaz à 10m en 10 minutes. Le plongeur utilise une bouteille de 11l gonflée à 200bar. Quelle est sa consommation?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $SAC=\frac{12 \times 11}{10 \times 2}=6.6l/min$
 
 		\1 Une plongeur ayant une consommation de 13l/min planifie une plongée à 25m pour 35 minutes. Quelle est la quantité de gaz nécessaire pour la partie profonde de la plongée?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 $V=3.5 \times 35 \times 13=1592.5l$
 
 		\1 Effectuer une planification pour un plongeur voulant faire une plongée multi-niveaux sur un tombant à 28m pour 30 minutes. Le plongeur à une consommation de 5l/min. La plongée sera effectuée dans un environnement tropical en eau chaude. Inclure le choix du gaz et pourquoi, l'exposition à l'oxygène, la planification de la décompression, les calculs d'approvisionnement en gaz, les choix d'équipement, et les considérations thermiques.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Mélange idéal: $FO_2 = 1.4/3.8 = 36.8\%$
+			\2 Consommation: 5l/min
+			\2 Volume: $V=5 \times 3.8 \times 30 = 570l$
+			\2 CNS maximum à 1.4 ATA: 150 minutes
+			\2 $CNS=30/150=20\%$
+			\2 OTUs/min à 1.4 ATA: 1.63 OTU
+			\2 $OTUs=30 \times 1.63 = 48.9OTUs$
+			\2 Profondeur équivalente:
+			\2 $EAD= \{ (28+10)\times \frac{1-0.368}{0.79} \}-10 = 20.4m$
+			\2 Limite de non-décompression: 22m pour 37 minutes
 	\end{outline}
 	\pagebreak
 
@@ -283,41 +270,39 @@
 	\section{Protocoles}
 	\begin{outline}
 		\1 Quels sont la avantages d'une checklist pré-plongée?
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Évite les erreurs humaines
+			\2 Simplifie les procédures
+			\2 Confirme que tous les tests ont été effectuées
 
 		\1 Citer trois choses qu'un plongeur doit faire avant de respirer une mélange gazeux.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 L'analyser
+			\2 Remplir le logbook
+			\2 Annoter les bouteilles
 
 		\1 Lister les éléments de l'acronyme START et définir chaque élément.
-			\2[S] \hrulefill
-			\2[T] \hrulefill
-			\2[A] \hrulefill
-			\2[R] \hrulefill
-			\2[T] \hrulefill
+			\2[S] S-Drill: panne d'air et contrôle des bulles
+			\2[T] Team: Contrôle de l'équipement
+			\2[A] Air: Vérification des volumes et pression
+			\2[R] Routes: Trajet
+			\2[T] Tables: Profondeur, durée, planification,...
 
 		\1 Décrire une descente idéale.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 En équipe
+			\2 Contrôle de l'équipement
+			\2 Suivant la planification
 
 		\1 Décrire une remontée idéale.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Ponctuelle
+			\2 Précise
+			\2 Performante
 
 		\1 Pour une plongée à 30m, lister les paliers à effectuer en ayant une approche "de paliers de sécurité multi-niveaux".
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Mi-distance entre le fond et la surface: 15m
+			\2 Mi-distance entre le premier stop et la surface: 8m
+			\2 Palier de sécurité: 3m
 
 		\1 Décrire la philosophie idéale pour une planification d'urgence.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Prévoir suffisament de gaz pour effectuer une remontée en accomplissant les paliers de sécurtié
 	\end{outline}
 	\pagebreak
 
@@ -327,30 +312,13 @@
 	\section{Mélanges gazeux}
 	\begin{outline}
 		\1 Décrire le mélange par pression partielle.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Ajouter une quantité (pression) d'oxygène, puis compléter avec de l'air afin d'obtenir un mélange adéquat. 
 
 		\1 Décrire le mélange par flux continu.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
+			\2 Un flux constant d'oxygène est mélanger à de l'air afin d'obtenir un mélange d'air enrichi. Ce mélange est ensuite mis sous pression à l'aide d'un compresseur
 
 		\1 Décrire le fonctionnement d'un système à membrane.
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-			\2[] \hspace{-2em}\hrulefill
-
-		\1 
+			\2 Une membrane permet de filtrer l'oxygène et l'azote afin de créer un air appauvri en azote (donc riche en oxygène). Ce mélange est ensuite mis sous pression à l'aide d'un compresseur.
 
 	\end{outline}
 	\pagebreak
