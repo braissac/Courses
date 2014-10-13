@@ -8,7 +8,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper]{geometry}
-\geometry{verbose,tmargin=3.5cm,bmargin=3cm,lmargin=2cm,rmargin=2cm,headheight=3cm,headsep=0.5cm,footskip=1cm}
+\geometry{verbose,%
+				tmargin=3.5cm,%
+				bmargin=3cm,%
+				lmargin=2cm,%
+				rmargin=2cm,%
+				headheight=3cm,%
+				headsep=1cm,%
+				footskip=1cm}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{textcomp} % Use to draw a square with \Box
@@ -29,7 +36,7 @@
 %										Outline
 %--------------------------------------------------------------------- 
 % Title of the question in bold
-\newenvironment{aenumerate}{	\begin{enumerate}\bfseries }{	\end{enumerate} }
+\newenvironment{aenumerate}{\begin{enumerate}\bfseries}{\end{enumerate} }
 
 % New list, normal font, square before the item, item on the same page
 \newcounter{bcounter}
@@ -40,8 +47,8 @@
 % Change style of the list
 \renewcommand{\outlinei}{aenumerate}
 \renewcommand{\outlineii}{benumerate}
-\renewcommand{\outlineiii}{style}
-\renewcommand{\outlineiiii}{style}
+\renewcommand{\outlineiii}{enumerate}
+\renewcommand{\outlineiiii}{enumerate}
 
 %---------------------------------------------------------------------
 %										Pictures and path
