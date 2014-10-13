@@ -1,64 +1,19 @@
 \documentclass[english,12pt,a4paper]{article}
-\renewcommand{\familydefault}{\sfdefault}
 
-\usepackage{helvet}	% Helvetica font
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper]{geometry}
-\geometry{verbose,tmargin=3.5cm,bmargin=3cm,lmargin=2cm,rmargin=2cm,headheight=3cm,headsep=0.5cm,footskip=1cm}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{textcomp}
-\usepackage{graphicx}
-\usepackage{transparent}
-\usepackage{enumitem}
-\usepackage{babel,amsfonts}
-\usepackage{fancybox}
-\usepackage{outlines} % Easy itemize and enumerate
+\usepackage{../../shared/tex/course_tdi}
 
-% Title of the question in bold
-\newenvironment{aenumerate}{	\begin{enumerate}\bfseries }{	\end{enumerate} }
+\title{TDI Procédures de décompression}
+\subtitle{Révision de connaissances}
 
-% New list, normal font, square before the item, item on the same page
-\newcounter{bcounter}
-\newenvironment{benumerate}%
-{	\normalfont	\begin{list}{$\Box$ \Alph{bcounter}:~}{\usecounter{bcounter} \samepage} }%
-{	\end{list}	}
-
-% Change style of the list
-\renewcommand{\outlinei}{aenumerate}
-\renewcommand{\outlineii}{benumerate}
-\renewcommand{\outlineiii}{style}
-\renewcommand{\outlineiiii}{style}
-
-% Section in header
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-
-% Pictures and path
-\usepackage{graphicx}
-\newcommand{\tdi}{/Users/chrisbraissant/Documents/_Diving/_TDI-SDI/Graphics/Full_Logo/TDI_Letter}
-\newcommand{\background}{/Users/chrisbraissant/Documents/_Diving/Banstec/Logo/Background_white}
-
-% Background
-\usepackage{draftwatermark}
-\SetWatermarkText{\transparent{0.4}\includegraphics[angle=-45]{\background}}
+\author{TECHNICAL DIVING INTERNATIONAL}
+\website{www.tdisdi.com}
 
 %---------------------------------------------------------------------
 %										DOCUMENT
 %---------------------------------------------------------------------
 \begin{document}
 
-	% Header and Footer
-	\renewcommand{\footrulewidth}{1pt}
-	\renewcommand{\headrulewidth}{1pt}
-
-	\lhead{\textbf{TDI Decompression Procedures}\\ Chapitre \thesection: \rightmark }
-	\chead{}
-	\rhead{\includegraphics[height=1cm]{\tdi}}
-
-	\lfoot{Chris Braissant}
-	\cfoot{}
-	\rfoot{\thepage}
+\input{../../shared/tex/title_tdi}
 
 %---------------------------------------------------------------------
 %										Plongée à decompression
@@ -787,7 +742,7 @@
 			\2 Toutes les pièces de l'équipement
 			\2 Toutes les réponses ci-dessus
 
-		\1 STOP est un acronyme qui guide le plongeur à travers les contrôles de sécurité pré-plongée.
+		\1 STOP est un acronyme qui guide le plongéeeur à travers les contrôles de sécurité pré-plongée.
 			\2 Vrai
 			\2 Faux
 

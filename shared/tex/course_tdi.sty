@@ -1,0 +1,74 @@
+\ProvidesPackage{../../shared/tex/course_tdi}
+
+%---------------------------------------------------------------------
+%										PACKAGES
+%---------------------------------------------------------------------
+\usepackage{helvet}	% Helvetica font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3.5cm,bmargin=3cm,lmargin=2cm,rmargin=2cm,headheight=3cm,headsep=0.5cm,footskip=1cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{textcomp} % Use to draw a square with \Box
+\usepackage{graphicx} 
+\usepackage{babel,amsfonts}
+\usepackage{fancybox,pdfpages}
+\usepackage{outlines} % Easy itemize and enumerate
+
+%---------------------------------------------------------------------
+%										Title and subtitle
+%--------------------------------------------------------------------- 
+\renewcommand{\title}[1]{\def\thetitle{#1}}
+\newcommand{\subtitle}[1]{\def\thesubtitle{#1}}
+\renewcommand{\author}[1]{\def\theauthor{#1}}
+\newcommand{\website}[1]{\def\thewebsite{#1}}
+
+%---------------------------------------------------------------------
+%										Outline
+%--------------------------------------------------------------------- 
+% Title of the question in bold
+\newenvironment{aenumerate}{	\begin{enumerate}\bfseries }{	\end{enumerate} }
+
+% New list, normal font, square before the item, item on the same page
+\newcounter{bcounter}
+\newenvironment{benumerate}%
+{	\normalfont	\begin{list}{$\Box$ \Alph{bcounter}:~}{\usecounter{bcounter} \samepage} }%
+{	\end{list}	}
+
+% Change style of the list
+\renewcommand{\outlinei}{aenumerate}
+\renewcommand{\outlineii}{benumerate}
+\renewcommand{\outlineiii}{style}
+\renewcommand{\outlineiiii}{style}
+
+%---------------------------------------------------------------------
+%										Pictures and path
+%--------------------------------------------------------------------- 
+\newcommand{\tdi}{/Users/chrisbraissant/Documents/_Diving/_TDI-SDI/Graphics/Full_Logo/TDI_Letter}
+\newcommand{\tdilogo}{/Users/chrisbraissant/Documents/_Diving/_TDI-SDI/Graphics/Logos/TDI/TDI_BW_Logo.pdf}
+\newcommand{\background}{/Users/chrisbraissant/Documents/_Diving/Courses/shared/img/TDI_background}
+
+% Background
+\usepackage{draftwatermark}
+\SetWatermarkText{\includegraphics[angle=-45]{\background}}
+
+%---------------------------------------------------------------------
+%										Header and Footer
+%--------------------------------------------------------------------- 
+% Section in header
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+% Horizontal line
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{1pt}
+
+% Definition
+\lhead{\textbf{\thetitle}}
+\chead{}
+\rhead{\includegraphics[height=1cm]{\tdi}}
+
+\lfoot{\theauthor}
+\cfoot{}
+\rfoot{\thepage}
