@@ -107,7 +107,11 @@
 		\item Contrôle la sursaturation
 		\item Marge de sécurité de la M-Value
 		\item Exprimé en pourcentage (100\% = M-Value)
-		\item Facteurs de gradient bas (fond) et haut (surface)
+		\item Facteurs de gradient par paire:
+		\begin{itemize}
+			\item GF(Low) contrôle la profondeur du premier palier\\(Niveau de sursaturation avant le premier palier)
+			\item GF(High) contrôle la durée du dernier palier\\(Niveau de sursaturation à la fin de la plongée)
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -116,36 +120,290 @@
 \end{frame}
 
 %---------------------------------------------------------------------
-%								VGM
-%---------------------------------------------------------------------
-\subsection{VGM}
-
-
-%---------------------------------------------------------------------
 %								Modèles à double phase
 %---------------------------------------------------------------------
-\subsection{Modèles à double phase}
+\subsection{Modèles à bulles}
 
+\begin{frame}{Modèles à bulles}
+	\textbf{Albert Richard Behnke Jr (1903 - 1992)}  
+	\begin{itemize}
+		\item Médecin pour l'institut de recheche médicale de l'U.S. Navy
+		\item Différencies l'embolie gazeuse (AGE) des accidents de décompression
+		\item Ce n'est pas l'éxistance de bulles silencieuses, maisla quantité de gaz libre qui crée un accident de décompression
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Modèles à bulles}  
+	\textbf{Brian Hills \& Dr. Hugh LeMessurier ($\sim$ 1963)}
+	\begin{itemize}
+		\item Etudient les plongeur de perles en Australie
+		\item Ne plongent pas selon les tables Buhlamnn
+		\item Système empirique, paliers plus profonds et remontée direct depuis 7m.
+		\item Temps de décompression réduit de 2/3 par rapport aux tables de l'US Navy
+		\item Nouvelle approche: étudier les gaz dissous et les gaz à l'état libre (bulles)
+		\item Peu de soutien, trop différent, passé aux oubliettes!
+	\end{itemize}
+\end{frame}
 
 %---------------------------------------------------------------------
 %								Comportement des bulles
 %---------------------------------------------------------------------
-\subsection{Comportement des bulles}
 
+\begin{frame}{Comportement des bulles}  
+	\textbf{Comportement}
+	\begin{itemize}
+	\item  Pour qu'une bulle grandisse, il faut que la pression interne soit plus grande que la pression externe.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}
+    \begin{columns} % the "c" option specifies center vertical alignment
+
+    \column{.5\textwidth}
+		\textbf{Pression interne}
+		\begin{itemize}
+			\item Presion d'azote dans la bulle
+		\end{itemize}
+
+		\vspace{1em}
+		
+		\textbf{Pression externe}
+		\begin{itemize}
+			\item Pression ambiante
+			\item Tension de surface (peau de la bulle)\\Appelée pression de Laplace
+		\end{itemize}
+    \column{.4\textwidth}
+     	\mypict{../img/bubble}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}
+	\textbf{Changement de taille des bulles}
+		\begin{itemize}
+			\item Pression ambiante
+			\item Concentration de ga dans la bulle
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}  
+	\textbf{Comportement à saturation}
+	\begin{itemize}
+		\item Equilibre des pressions:$$P_{interne} = P_{ambiante}+P_{Laplace}$$ \pause
+		\item Pression tissulaire environnante:$$P_{tissus}= PN{_2}_{ambiante}$$ \pause
+		\item Diminution de taille (diffusion externe) si: $$P_{interne} > P_{tissus}$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}  
+	\textbf{Exemple:}
+	\begin{itemize}
+		\item Plongeur respirant de l'air à 40m:
+				\begin{align*}
+					P_{ambiante} &= 5 bar\\
+					P_{Laplace} &= .5 bar\\
+					P_{intene} &= P_{ambiante} + P_{Laplace} = 5.5 bar
+				\end{align*} \pause
+
+		\item Pression dans les tissus (saturés!):
+				$$P_{tissus} = PN_2 \times P_{ambiante} = .79 \times 5 =3.95 bar $$ \pause
+
+		\item La taille de la bulle va diminuer!
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}  
+	\textbf{Remontée}
+	\begin{itemize}
+		\item Changement rapide de pression ambiante
+		\item Pressions tissulaires dépendantes des périodes de chaques compartiments
+		\pause \vfill
+		\item Pression interne de la bulle dimiue
+		\pause \vfill
+		\item Lorsque la pression interne est inférieure à la pression tissulaire, le gaz se diffuse dans la bulle, et celle-ci augmente!
+		\pause \vfill
+		\item Les paliers de décompression limite la pression ambiante pour éviter ce phénomène
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}  
+	\textbf{Exemple:}
+	\begin{itemize}
+		\item Le même plongeur remonte rapidement à 20m:
+				\begin{align*}
+					P_{ambiante} &= 3 bar\\
+					P_{Laplace} &= .5 bar\\
+					P_{intene} &= 3.5 bar
+				\end{align*} \pause
+		\item Pression tissulaire n'a pas eu le temps de s'adapter:
+				$$P_{tissus} =3.95 bar $$ \pause
+
+		\item La taille de la bulle va augmenter!
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}
+	\textbf{Pression de Laplace}
+	\begin{itemize}
+		\item Directement liée au rayon de la bulle
+		\item Rayon important, pression de Laplace faible\\(la "peau" de la bulle devient plus fine)
+		\item Lorsque la bulle grandi, la pression externe diminue, et la bulle grandi encore plus rapidement!
+		\item Des bulles de différentes taille ne réagiront pas pareillement
+		\vfill
+		\item Les grosses bulles augmentent, les petites bulles diminuent
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comportement des bulles}
+	\textbf{Rayon critique}
+	\begin{itemize}
+		\item Rayon à partir duquel une bulle commence à grossir
+		\item Modèles essaient de contrôler la taille des bulles
+		\item En dessous du rayon critique, les bulles vont diminuer lorsque le plongeur remonte
+	\end{itemize}
+\end{frame}
 
 %---------------------------------------------------------------------
 %								Quantité de bulles
 %---------------------------------------------------------------------
 \subsection{Quantité de bulles}
 
+\begin{frame}{Quantité de bulles}  
+	\textbf{Réalité:}
+	\begin{itemize}
+		\item Corps humain complexe
+		\item Plusieurs compartiments (période et perfusion variées)
+		\item Bulles de toutes les tailles
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantité de bulles}
+	\textbf{Tissus rapides}
+	\begin{itemize}
+		\item Se saturent durant la descente et au fond
+		\item Haut niveau de sursaturation à la remontée
+		\item Creation de bulles
+		\item Paliers profonds nécessaires
+	\end{itemize}
+	\vfill
+	\textbf{Tissus lents}
+	\begin{itemize}
+		\item Se saturent durant les paliers profonds
+		\item Augmente la durée totale des paliers
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantité de bulles}  
+	\textbf{Bulles}
+	\begin{itemize}
+		\item Bulles silencieuses ne cause pas d'ADD
+		\item Beaucoup de petites bulles, peu de grandes
+		\item Modèles contrôle le rayon critique
+		\item Laisse grandir que les bulles d'une certaine taille
+		\item Permet de contrôler le volume de gaz inerte
+	\end{itemize}
+\end{frame}
 
 %---------------------------------------------------------------------
-%								VPM
+%								VPM: Modèle à perméabilité variable
 %---------------------------------------------------------------------
-\subsection{VPM}
+\subsection{VPM: Modèle à perméabilité variable}
 
+\begin{frame}{VPM: Modèle à perméabilité variable}
+	\textbf{Principe:}
+	\begin{itemize}
+		\item Basé sur le modèle de Buhlmann
+		\item 16 compartiments
+		\item Ajoute une seule bulle dans chaque compartiment
+		\item Modèle à gaz dissous et à bulles combinés
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{VPM: Modèle à perméabilité variable}
+	\textbf{Perméablité variable:}
+	\begin{itemize}
+		\item "Peau" des bulles composée de micro-billes (molécules)
+		\item La diffusion se fait entre les molécules
+		\item Lorsque la presion ambiante augmente, la perméabilité diminue
+		\item D'où le nom: Perméabilité variable
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{VPM: Modèle à perméabilité variable}
+	\textbf{Perméablité variable:}\\
+	\mypict{../img/permeability}
+\end{frame}
+
+\begin{frame}{VPM: Modèle à perméabilité variable}  
+	\textbf{Fonctionnement de l'alogrithme:}
+	\begin{itemize}
+		\item Diffusion des gaz selon Buhlmann
+		\item VPM surveille le rayon des bulles
+		\item VPM calcule la pression interne de la bulle
+		\item Comparaison entre Buhlmann et VPM pour savoir si une bulle grandi
+		\item Palier avant qu'une bulle grandisse
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{VPM: Modèle à perméabilité variable}  
+	\textbf{Variante:}
+	\begin{itemize}
+		\item Original: aucune bulle ne grandi - trop conservateur
+		\item Corps peu gérer un certain volume de gaz libre
+		\item Seules les bulles d'une certaine taille peuvent grandir
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{VPM: Modèle à perméabilité variable}
+	\textbf{VPM-B:}
+	\begin{itemize}
+		\item Incorpore la loi de Boyle
+		\item Corrige la pression de Laplace avec le nouveau volume (plus grand)
+		\item Ajout de conservatisme
+	\end{itemize}
+	\vfill
+	\textbf{VPM-B/E:}
+	\begin{itemize}
+		\item Algorithme non divulgué
+		\item Ajout de conservatisme pour les plongées extrêmes
+	\end{itemize}
+\end{frame}
 %---------------------------------------------------------------------
 %								RGBM
 %---------------------------------------------------------------------
-\subsection{RGBM}
+\subsection{RGBM: Reduce Gradient Bubble Model}
+
+\begin{frame}{RGBM: Reduce Gradient Bubble Model}  
+	\textbf{RGBM vs VPM:}
+	\begin{itemize}
+		\item Basé sur VPM
+		\item Initiallement prévu pour les plongées répetitives
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{RGBM: Reduce Gradient Bubble Model}  
+	\textbf{RGBM vs VPM:}
+	\begin{itemize}
+		\item VPM: entièrement basé sur le volume des bulles
+		\item RGBM: volume des bulles pour les paliers profonds, gaz dissous pour la surface
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{RGBM: Reduce Gradient Bubble Model}  
+	\textbf{RGBM vs VPM:}
+	\begin{itemize}
+		\item Reduit les gradients autorisés par 3 facteurs:
+		\begin{itemize}
+			\item Bulles conservées lors de plongées répetitives
+			\item Profils inversés
+			\item Présence de micro-noyaux
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{RGBM: Reduce Gradient Bubble Model}  
+	\textbf{RGBM vs VPM:}
+	\begin{itemize}
+		\item Prend en compte la "fenêtre oxygène"
+		\item Différence de pression partielle d'oxygène entre le sang artériel et les tissus
+	\end{itemize}
+\end{frame}
