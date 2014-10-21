@@ -1,0 +1,37 @@
+###################
+# Compiled source #
+###################
+*.aux
+*.log
+*.synctex.gz
+*.fdb_latexmk
+*.nav
+*.out
+*.toc
+*.snm
+
+##########
+# Movies #
+##########
+*.mp4
+*.avi
+
+##########
+# Images #
+##########
+*.jpg
+*.png
+*.gif
+
+##########
+# Others #
+##########
+*.ppt
+*.xls
+*.xlsx
+
+#################
+# Special paths #
+#################
+*/misc
+*/pdf
