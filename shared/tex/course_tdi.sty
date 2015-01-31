@@ -59,6 +59,16 @@
 \renewcommand{\outlineiii}{enumerate}
 \renewcommand{\outlineiiii}{enumerate}
 
+% Ajoute le nom à la fin d'une section
+\newcommand{\sectionpage}[0]{%
+	\vfill
+	\rule{\textwidth}{1pt}\\%
+	Déclaration de l'étudiant: J'ai passé en revue les questions auxquelles j'ai répondu incorrectement ou incomplètement et je comprend ce que j'ai manqué.
+	\vspace{0.6cm}\\%
+	\textbf{	Nom de l'élève: \hrulefill \vspace{0.6cm} \\ Date: \rule{3cm}{0.4pt} Signature: \hrulefill}%
+	\pagebreak%
+	}
+
 %---------------------------------------------------------------------
 %										Pictures and path
 %--------------------------------------------------------------------- 
