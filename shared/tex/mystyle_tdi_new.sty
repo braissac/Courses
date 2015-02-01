@@ -1,0 +1,152 @@
+\ProvidesPackage{../../shared/tex/mystyle_tdi}
+
+%---------------------------------------------------------------------
+%										PACKAGES
+%---------------------------------------------------------------------
+\usepackage{helvet}	% Helvetica font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath,amssymb,xfrac} % Math
+\usepackage{mathtools} % Math
+\usepackage{multicol}
+\usepackage{transparent,framed,color}
+\usepackage{multimedia}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{tabularx} % Tabular
+\usepackage{graphicx,tikz} % Pictures and path
+\usetikzlibrary{mindmap}
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage{outlines} % Easy itemize and enumerate
+
+%---------------------------------------------------------------------
+%										COMMANDS
+%---------------------------------------------------------------------
+% Ligne
+\newcommand{\st}{\underline{\hspace{1.5cm}}}
+
+% Image
+\newcommand{\mypict}[1]{%
+	\centering\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{#1}
+}
+
+% Background
+\newcommand{\backgroundimg}{../../shared/img/tdi_ppt.jpg}
+
+%---------------------------------------------------------------------
+%										LISTS
+%---------------------------------------------------------------------
+\newenvironment{alist}{\begin{list}{}{\leftmargin0pt\bfseries\itemsep2em\itemindent0pt}}{\end{list}}
+\newenvironment{bitemize}{\begin{itemize}\normalfont}{\end{itemize}}
+
+
+% Change style of the list
+\renewcommand{\outlinei}{alist}
+\renewcommand{\outlineii}{bitemize}
+\renewcommand{\outlineiii}{enumerate}
+\renewcommand{\outlineiiii}{enumerate}
+
+%---------------------------------------------------------------------
+%										EQUATION
+%---------------------------------------------------------------------
+
+% Margin around equation
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{0pt}
+  \setlength\belowdisplayskip{10pt}
+}
+
+%---------------------------------------------------------------------
+%										BEAMER THEME
+%---------------------------------------------------------------------
+% Change the color theme
+\definecolor{mblack}{RGB}{0,0,0}
+\definecolor{mgray}{RGB}{100, 100, 100}  
+\definecolor{mwhite}{RGB}{255, 255, 255}
+\definecolor{mred}{RGB}{255, 0, 0}
+\definecolor{mblue}{RGB}{0, 113, 187}
+\definecolor{myellow}{RGB}{251, 223, 83}
+
+% Theme
+\usetheme{default}
+
+\setbeamercolor{palette primary}{fg=,bg=}
+\setbeamercolor{logo}{fg=,bg=}
+\setbeamercolor{sidebar}{fg=,bg=}
+
+% Sidebar
+\useoutertheme[height=0pt, width=2cm, hideothersubsections]{sidebar}
+
+\setbeamercolor{palette sidebar}{parent=palette}
+
+% Text
+\setbeamercolor{normal text}{fg=white, bg=}
+\setbeamercolor{structure}{}
+%\setbeamerfont{structure}{fg=, bg=}
+
+% Sidebar
+\setbeamercolor{sidebar}{fg=white, bg=}
+\setbeamercolor{section in sidebar}{fg=myellow}
+\setbeamercolor{section in sidebar shaded}{fg=white}
+\setbeamercolor{subsection in sidebar}{fg=myellow}
+\setbeamercolor{subsection in sidebar shaded}{fg=white}
+
+% Item
+\setbeamercolor{item}{fg=mwhite}
+\setbeamercolor{subitem}{parent=item}
+\setbeamercolor{subsubitem}{parent=subitem}
+
+% Enumerate
+\setbeamercolor{itemize item}{parent=item}
+\setbeamercolor{itemize subitem}{parent=subitem}
+\setbeamercolor{itemize subsubitem}{parent=subsubitem}
+
+% Description
+\setbeamercolor{description item}{parent=item}
+
+% Frametitle
+\addtobeamertemplate{frametitle}{\vskip2pt}{}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries\centering}
+\setbeamercolor{frametitle}{fg=myellow,bg=}
+
+% Circle for items
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{enumerate items}[default]
+	
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%---------------------------------------------------------------------
+%										BEAMER LAYOUT
+%---------------------------------------------------------------------
+% Center the sidebar 
+\addtobeamertemplate{sidebar left}{\vfill}{\vfill}
+
+% Background
+\setbeamertemplate{background canvas}%
+	{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]%
+	{\backgroundimg}}
+
+% Section Title
+% \strut command inserts invis ible elements that ensure a guaranteed height:
+\AtBeginSection[]
+{  \begin{frame}
+		\resizebox{!}{18pt}{\strut\textbf{\insertsection}\strut}\\
+		\vfill
+   \end{frame}
+}
+
+% Title 
+\setbeamertemplate{title page}
+{ 	
+	\resizebox{!}{12pt}{\strut\insertauthor\strut}\\
+	\resizebox{!}{18pt}{\strut\textbf{\inserttitle}\strut}\\
+	\resizebox{!}{12pt}{\strut\insertinstitute\strut}\\
+	\vfill
+}	
+
+\makeatother
